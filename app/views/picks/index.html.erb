@@ -1,0 +1,24 @@
+<h1>Picks</h1>
+
+<% @picks.in_groups_of(3) do |group| %>
+  <div class="row">
+    <% group.compact.each do |pick| %>
+      <div class="col-md-12 pic-wrapper">
+        <div class="col-md-4">
+          <%= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
+        </div>
+        <div class="col-md-8">  
+          <%= pick.group.name %>
+          <h4><%= link_to pick.location, pick %></h4>
+          <%= pick.description %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<br />
+
+
+<%= link_to 'New Pick', new_pick_path %>
+<%= link_to 'Show Group', groups_path %>

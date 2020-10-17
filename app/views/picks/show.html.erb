@@ -1,0 +1,19 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-9">
+    <%= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
+  </div>
+
+  <div class="col-md-3">
+    <p><b>Group: </b><%= @pick.group.name %></p>
+    <p><b>Location: </b><%= @pick.location %></p>
+    <p><b>Description: </b><%= @pick.description %></p>
+    <p>
+      <%= link_to 'Edit', edit_pick_path(@pick) %> |
+      <%= link_to 'Destroy', @pick, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%= link_to 'Back', picks_path %>
+    </p>
+  </div>
+</div>
