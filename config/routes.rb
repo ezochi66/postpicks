@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/info'
   resources :groups
   resources :picks
   root to: redirect('/picks')
