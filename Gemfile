@@ -12,6 +12,7 @@ end
 group :production do
   gem 'pg'
 end
+gem "geocoder"
 
 gem 'carrierwave'
 # Use Puma as the app server
