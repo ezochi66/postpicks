@@ -81,6 +81,10 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.9.0)
     ffi (1.13.1)
     geocoder (1.6.4)
@@ -217,6 +221,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave
+  dotenv-rails
   geocoder
   jbuilder (~> 2.7)
   listen (~> 3.2)
@@ -235,7 +240,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.6.6p146
 
 BUNDLED WITH
    1.17.2
