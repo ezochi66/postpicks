@@ -71,4 +71,5 @@ class PicksController < ApplicationController
     def pick_params
       params.require(:pick).permit(:group_id, :location, :description, :picture)
     end
+    
 end
