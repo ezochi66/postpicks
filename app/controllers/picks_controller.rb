@@ -4,8 +4,8 @@ class PicksController < ApplicationController
   # GET /picks
   # GET /picks.json
   def index
-    if params[:location_key]
-      @picks = Pick.where('location LIKE ?', "%#{params[:location_key]}%")
+    if params[:search_key]
+      @picks = Pick.where(['location LIKE ? OR address LIKE ? OR description LIKE ? OR group.name LIKE ?', "%#{params[:searchzx_key]}%", "%#{params[:searchzx_key]}%", "%#{params[:searchzx_key]}%", "%#{params[:searchzx_key]}%"])
     else
       @picks = Pick.all
     end

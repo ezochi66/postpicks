@@ -2,7 +2,7 @@
 
 <%= form_tag('/picks', method: 'get') do %>
   <%= label_tag(:location_key, 'Search name:') %>
-  <%= text_field_tag(:location_key) %>
+  <%= text_field_tag(:serach_key) %>
   <%= submit_tag('Search') %> <%= link_to 'Clear', picks_path %>
 <% end %>
 
