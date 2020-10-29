@@ -2,7 +2,7 @@ class Pick < ApplicationRecord
     belongs_to :group
     mount_uploader :picture, PictureUploader
     geocoded_by :address
-    after_validation :geocode, if: :address_changed?
+    # after_validation :geocode, if: :address_changed?
 
     def self.search(search)
       return Pick.all unless search

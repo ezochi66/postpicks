@@ -26,6 +26,13 @@
           <h4><%= link_to pick.location, pick %></h4>
           <h2>Description</h2>
           <%= pick.description %>
+
+          <br />
+
+          <%= link_to 'Show', pick %>
+          <%= link_to 'Edit', edit_pick_path(pick) %>
+          <%= link_to 'Destroy', pick, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </tr>
         </div>
       </div>
     <% end %>

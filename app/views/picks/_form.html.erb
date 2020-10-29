@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :"positive or negative"%>
+    <%= form.select :feel, [["Positive", "Positive"], ["Negative", "Negative"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
     <%= form.label :address %>
     <%= form.text_field :address %>
   </div>
@@ -24,6 +29,10 @@
   <div class="field">
     <%= form.label :location %>
     <%= form.text_field :location %>
+  </div>
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
   </div>
 
   <div class="field">
