@@ -16,9 +16,11 @@
     <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
   </div>
 
-  <div class="field">
-    <%= form.label :"positive or negative"%>
-    <%= form.select :feel, [["Positive", "Positive"], ["Negative", "Negative"]], include_blank: "選択して下さい" %>
+  <div class="field ">
+    <%= form.radio_button :feel, :positive %>
+    <%= form.label :feel, "Positive", {value: :positive, style: "display: inline-block;"} %>
+    <%= form.radio_button :feel, :negative %>
+    <%= form.label :feel, "Negative", {value: :negative, style: "display: inline-block;"} %>
   </div>
 
   <div class="field">
