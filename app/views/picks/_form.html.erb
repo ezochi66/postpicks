@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field ">
     <%= form.label :group_id %>
     <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
   </div>
@@ -30,11 +30,6 @@
     <%= form.label :location %>
     <%= form.text_field :location %>
   </div>
-  <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude %>
-  </div>
-
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
