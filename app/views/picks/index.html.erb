@@ -14,11 +14,12 @@
   <div class="row">
     <% group.compact.each do |pick| %>
       <%= feel = "positive"%>
-      <% if pick.feel == "Negative"%>
+      <% if pick.feel == "Positive"%>
+      <%= feel = "positive"%>
+      <% else %>
       <%= feel = "negative"%>
       <% end %>
       <%# <div class="col-md-12 pic-wrapper"> %>
-      <div class="col-md-12 pic-wrapper <%= feel %>">
         <div class="col-md-4">
           <%= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
         </div>
