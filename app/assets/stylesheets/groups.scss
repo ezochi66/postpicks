@@ -1,3 +1,45 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+/*body {margin: 0;
+    font-family: 'Source Sans Pro', 'メイリオ',
+    'Hiragino Kaku Gothic Pro', sans-serif}*/
+
+/*tbody {
+    display: flex;
+    width:200px;
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #eeeeee;
+
+}*/
+
+ul {
+    display: flex;
+    width: 80%;
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #eeeeee;
+}
+
+/*li a {
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+	color: #000000;
+}*/
+li {
+    width: 25%;
+    text-align: center;
+    border: 1px solid black;
+}
+/*li:last-child {
+	border-bottom: none;
+}
+li a:hover:not(.active) {
+	color: #ffffff;
+	background-color: #1b2538;
+}*/

@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Groups</h1>
+<h2>taiki</h2>
 
 <table>
   <thead>
@@ -11,13 +12,13 @@
   </thead>
 
   <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td><%= group.name %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+   <% @groups.each do |group| %>
+      <ul>
+        <li><%= group.name %></li>  
+        <li><%= link_to 'Show', group %></li>
+        <li><%= link_to 'Edit', edit_group_path(group) %></li>
+        <li><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %> </li>
+      </ul>
     <% end %>
   </tbody>
 </table>
