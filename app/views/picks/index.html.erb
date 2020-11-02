@@ -1,5 +1,7 @@
 <h1>Picks</h1>
 
+<button>Positive</button>
+<button>Negative</button>
 
 <p>検索</p>
 <%= form_tag(picks_path,:method => 'get') do %>
@@ -26,15 +28,12 @@
         <div class="col-md-8">
           <h2>Group Name</h2>  
           <%= pick.group.name %>
-          <h2>feel</h2>
-          <%= pick.feel %>
           <h2>Address</h2>
           <%= pick.address %>
           <h2>Location</h2>
           <h4><%= link_to pick.location, pick %></h4>
           <h2>Description</h2>
           <%= pick.description %>
-
           <br />
 
           <%= link_to 'Show', pick %>

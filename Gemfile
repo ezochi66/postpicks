@@ -13,7 +13,10 @@ group :production do
   gem 'pg'
 end
 gem "geocoder"
+gem 'http'
+
 gem 'dotenv-rails'
+gem 'rails_12factor', group: :production
 
 gem 'carrierwave'
 # Use Puma as the app server

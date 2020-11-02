@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
+  <br/>
+
+  <div class="field ">
+    <%= form.radio_button :feel, :Positive %>
+    <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
+    <%= form.radio_button :feel, :Negative %>
+    <%= form.label :feel, "Negative", {value: :Negative, style: "display: inline-block;"} %>
+  </div>
+
   <div class="field ">
     <%= form.label :group_id %>
     <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
   </div>
 
-  <div class="field ">
-    <%= form.radio_button :feel, :positive %>
-    <%= form.label :feel, "Positive", {value: :positive, style: "display: inline-block;"} %>
-    <%= form.radio_button :feel, :negative %>
-    <%= form.label :feel, "Negative", {value: :negative, style: "display: inline-block;"} %>
-  </div>
 
   <div class="field">
     <%= form.label :address %>
