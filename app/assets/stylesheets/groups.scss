@@ -1,3 +1,74 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.new-group-menu {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px dashed black;
+    text-align: center;
+    margin: 20px;
+}
+
+.new-group-menu a {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    padding: 90px 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    font-size: 45px;
+}
+
+.new-group-menu a:hover {
+    color: red;
+    background-color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.group-menu {
+    position: relative;
+    display: inline-block;
+    background-color: #FDFBDA;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 20px;
+}
+
+.group-menu a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 90px 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    // line-height: ;
+}
+
+.group-menu a:hover {
+    color: red;
+    background-color: #FDFBDA;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.plus-btn {
+    // margin: 20px;
+    font-size: 30px;
+}
+
+a {
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+    font-weight: bold;
+}

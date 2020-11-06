@@ -2,20 +2,70 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-4">
     <%= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <p><b>Group: </b><%= @pick.group.name %></p>
     <p><b>Address: </b><%= @pick.address %></p>
     <p><b>Location: </b><%= @pick.location %></p>
     <p><b>Description: </b><%= @pick.description %></p>
+    <p>
+      <strong>Address:</strong>
+      <%= @pick.address %>
+    </p>
+
+    <p>
+      <strong>Latitude:</strong>
+      <%= @pick.latitude %>
+    </p>
+
+    <p>
+      <strong>Longitude:</strong>
+      <%= @pick.longitude %>
+    </p>
     <p>
       <%= link_to 'Edit', edit_pick_path(@pick) %> |
       <%= link_to 'Destroy', @pick, data: { confirm: 'Are you sure?' }, method: :delete %> |
       <%= link_to 'Back', picks_path %>
     </p>
   </div>
+  <% if @pick.address != nil %>
+    <div id="map"></div>
+  <% end %>
 
+  <script type="text/javascript">
+    function initMap() {
+
+      var test = {lat: <%= @pick.latitude %>, lng: <%= @pick.longitude %>};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: test
+      });
+      var transitLayer = new google.maps.TransitLayer();
+      transitLayer.setMap(map);
+
+      var contentString = '住所：<%= @pick.address %>';
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+      var marker = new google.maps.Marker({
+        position:test,
+        map: map,
+        title: contentString
+      });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    }
+  </script>
+
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=ENV['API_KEY']&callback=initMap">
+        
+  </script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </div>

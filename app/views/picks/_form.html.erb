@@ -11,15 +11,20 @@
     </div>
   <% end %>
 
+  <br/>
+
+  <div class="field ">
+    <%= form.radio_button :feel, :Positive %>
+    <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
+    <%= form.radio_button :feel, :Negative %>
+    <%= form.label :feel, "Negative", {value: :Negative, style: "display: inline-block;"} %>
+  </div>
+
   <div class="field ">
     <%= form.label :group_id %>
     <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
   </div>
 
-  <div class="field">
-    <%= form.label :"positive or negative"%>
-    <%= form.select :feel, [["Positive", "Positive"], ["Negative", "Negative"]], include_blank: "選択して下さい" %>
-  </div>
 
   <div class="field">
     <%= form.label :address %>
@@ -32,7 +37,8 @@
   </div>
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, id: "input-description" %>
+    <p id="counter">0文字</p>
   </div>
 
   <div class="field">

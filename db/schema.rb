@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2020_10_20_132454) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.string "feel"
   end
 
