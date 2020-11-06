@@ -6,17 +6,26 @@ ruby '2.6.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record
-group :development do
-  gem 'sqlite3', '~> 1.4'
-end
-group :production do
-  gem 'pg'
-end
+# group :development do
+#   gem 'sqlite3', '~> 1.4'
+# end
+# group :production do
+#   gem 'pg'
+# end
+
+# 開発環境(ローカル)ではSQLite3を使用
+gem 'sqlite3', group: :development
+
+# 本番環境(heroku)ではPostgreSQLを使用
+gem 'pg', group: :production
+
 gem "geocoder"
 gem 'http'
 
 gem 'dotenv-rails'
 gem 'rails_12factor', group: :production
+gem 'jquery-rails'
+
 
 gem 'carrierwave'
 # Use Puma as the app server

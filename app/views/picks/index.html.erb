@@ -1,14 +1,15 @@
 <h1>Picks</h1>
 
-<button>Positive</button>
-<button>Negative</button>
-
 <p>検索</p>
 <%= form_tag(picks_path,:method => 'get') do %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag 'Search', :name => nil %>
   <%= link_to 'Clear', picks_path %>
 <% end %>
+
+<button type="button" onClick="show-all">All</button>
+<button type="button" onClick="show-positive">Positive</button>
+<button type="button" onClick="show-negative">Negative</button>
 
 <br>
 <% @picks.in_groups_of(3) do |group| %>
@@ -20,19 +21,19 @@
       <% elsif pick.feel == "Negative"%>
       <div class="col-md-12 pic-wrapper negative">
       <% else%>
-      <div class="col-md-12 pic-wrapper">
+      <div class="col-md-12 pic-wrapper normal">
       <% end %>
         <div class="col-md-4">
           <%= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
         </div>
         <div class="col-md-8">
-          <h2>Group Name</h2>  
-          <%= pick.group.name %>
-          <h2>Address</h2>
-          <%= pick.address %>
-          <h2>Location</h2>
-          <h4><%= link_to pick.location, pick %></h4>
-          <h2>Description</h2>
+          <h4>Group Name</h4>  
+          <p><%= pick.group.name %></p>
+          <h4>Address</h4>
+          <p><%= pick.address %></p>
+          <h4>Location</h4>
+          <p><%= pick.location%></p>
+          <h4>Description</h4>
           <%= pick.description %>
           <br />
 
@@ -50,3 +51,25 @@
 
 <%= link_to 'New Pick', new_pick_path %>
 <%= link_to 'Show Group', groups_path %>
+
+<script>
+  function show-positive() {
+      document.document.getElementsByClassName('.positive').style.display = "";
+      document.document.getElementsByClassName('.negative').style.display = "none";
+      document.document.getElementsByClassName('.normal').style.display = "none";
+    }
+
+    function show-negative() {
+      document.document.getElementsByClassName('.positive').style.display = "none";
+      document.document.getElementsByClassName('.negative').style.display = "";
+      document.document.getElementsByClassName('.normal').style.display = "none";
+    }
+
+    function show-all() {
+      document.document.getElementsByClassName('.positive').style.display = "";
+      document.document.getElementsByClassName('.negative').style.display = "";
+      document.document.getElementsByClassName('.normal').style.display = "";
+    }
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

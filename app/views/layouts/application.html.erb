@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">  
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -31,7 +32,7 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="/picks">Picks</a></li>
           <li><%= link_to 'New Pick', new_pick_path %></li>
-          <li><%= link_to 'Show Group', groups_path %></li>
+          <li><%= link_to 'Select Group', groups_path %></li>
         </ul>
       </div>
     </div>

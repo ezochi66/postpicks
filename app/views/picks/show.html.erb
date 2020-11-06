@@ -2,11 +2,11 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-4">
     <%= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-4">
     <p><b>Group: </b><%= @pick.group.name %></p>
     <p><b>Address: </b><%= @pick.address %></p>
     <p><b>Location: </b><%= @pick.location %></p>
@@ -65,6 +65,7 @@
 
   <script async defer
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=ENV['API_KEY']&callback=initMap">
+        
   </script>
-
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </div>

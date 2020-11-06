@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .pic-wrapper {
+    width: 80%;
     padding: 50px;
     margin: 50px 0; 
     border: 1px solid black;
+    line-height: 6px;
+}
+
+.pic-wrapper p {
+    padding: 5px;
 }
 
 .positive {
@@ -13,4 +19,27 @@
 
 .negative {
     background-color: #EFE3FD;
+}
+
+.normal {
+    background-color: #EFEFF0;
+}
+
+label {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
+input[type="file"] {
+    width: 25%;
+}
+
+textarea {
+    width: 70%;
+    height: 100px;
 }
