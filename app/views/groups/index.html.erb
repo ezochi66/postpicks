@@ -1,28 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="ribbon_center">
+<h1 class="ribbon">Groups</h1>
+</div>
 
-<h1>Groups</h1>
-<h2>taiki</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
    <% @groups.each do |group| %>
-      <ul>
-        <li><%= group.name %></li>  
-        <li><%= link_to 'Show', group %></li>
-        <li><%= link_to 'Edit', edit_group_path(group) %></li>
-        <li><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %> </li>
-      </ul>
-    <% end %>
-  </tbody>
-</table>
-
+    <a href="#" class="group-menu">
+    <i class="fa fa-power-off"></i>
+    </a>
+        
+          <span><%= group.name %></span>
+          <li><%= link_to 'Show', group %></li>
+        </div>
+      <% end %>
 <br>
 
 <%= link_to 'New Group', new_group_path %>
