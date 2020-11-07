@@ -15,7 +15,8 @@
  */
 
 body { 
-    padding-top: 100px;
+    margin: 0;
+    padding-top: 60px;
 }
 /* 
 body { 
@@ -32,6 +33,12 @@ th {
 
 footer {
     text-align: center;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #map {
