@@ -7,5 +7,24 @@
 }
 
 .brcolor img {
-    max-width: 100%;
+    max-width: 400px;
+    // width: 40%;
+    padding: 5%;
+    margin-top:30%;
+    //float: left;
+}
+
+.col-md-5{
+    text-align: center;
+}
+
+.content p{
+    display: inline-block;
+    color:#707070;
+    line-height: 18x;
+    letter-spacing: 3px;
+    font-size: 16px;
+    // width: 40%;
+    padding-left: 20px;
+    margin: 21%;
 }
