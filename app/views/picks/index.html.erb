@@ -1,60 +1,61 @@
-<h1>Picks</h1>
+<div class="container">
+  <h1>Picks</h1>
+  <p>検索</p>
+  <%= form_tag(picks_path,:method => 'get') do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag 'Search', :name => nil %>
+    <%= link_to 'Clear', picks_path %>
+  <% end %>
 
-<p>検索</p>
-<%= form_tag(picks_path,:method => 'get') do %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag 'Search', :name => nil %>
-  <%= link_to 'Clear', picks_path %>
-<% end %>
+  <button type="button" onClick="show-all">All</button>
+  <button type="button" onClick="show-positive">Positive</button>
+  <button type="button" onClick="show-negative">Negative</button>
 
-<button type="button" onClick="show-all">All</button>
-<button type="button" onClick="show-positive">Positive</button>
-<button type="button" onClick="show-negative">Negative</button>
+  <br>
+  <% @picks.in_groups_of(3) do |group| %>
+    <div class="row">
+      <% group.compact.each do |pick| %>
+        <% if pick.feel == "Positive"%>
+        <div class="col-md-12 pic-wrapper positive">
+        <% elsif pick.feel == "Negative"%>
+        <div class="col-md-12 pic-wrapper negative">
+        <% else%>
+        <div class="col-md-12 pic-wrapper normal">
+        <% end %>
+          <div class="col-md-4">
+            <%= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
+          </div>
+          <div class="col-md-8">
+            <h4>Group Name</h4>  
+            <p><%= pick.group.name %></p>
+            <h4>Address</h4>
+            <p><%= pick.address %></p>
+            <h4>Location</h4>
+            <p><%= pick.location%></p>
+            <h4>Description</h4>
+            <%= pick.description %>
+            <br />
 
-<br>
-<% @picks.in_groups_of(3) do |group| %>
-  <div class="row">
-    <% group.compact.each do |pick| %>
-      <% if pick.feel == "Positive"%>
-      <div class="col-md-12 pic-wrapper positive">
-      <% elsif pick.feel == "Negative"%>
-      <div class="col-md-12 pic-wrapper negative">
-      <% else%>
-      <div class="col-md-12 pic-wrapper normal">
+            <%= link_to 'Show', pick %>
+            <%= link_to 'Edit', edit_pick_path(pick) %>
+            <%= link_to 'Destroy', pick, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
       <% end %>
-        <div class="col-md-4">
-          <%= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
-        </div>
-        <div class="col-md-8">
-          <h4>Group Name</h4>  
-          <p><%= pick.group.name %></p>
-          <h4>Address</h4>
-          <p><%= pick.address %></p>
-          <h4>Location</h4>
-          <p><%= pick.location%></p>
-          <h4>Description</h4>
-          <%= pick.description %>
-          <br />
+    </div>
+  <% end %>
 
-          <%= link_to 'Show', pick %>
-          <%= link_to 'Edit', edit_pick_path(pick) %>
-          <%= link_to 'Destroy', pick, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
-<br />
+  <br />
 
 
-<%= link_to 'New Pick', new_pick_path %>
-<%= link_to 'Show Group', groups_path %>
+  <%= link_to 'New Pick', new_pick_path %>
+  <%= link_to 'Show Group', groups_path %>
+</div>
 
 <script>
-  var positive = document.getElementByClassName(positive);
-  var positive = document.getElementByClassName(negative);
-  var positive = document.getElementByClassName(normal);
+  var positive = document.getElementssByClassName(positive);
+  var positive = document.getElementssByClassName(negative);
+  var positive = document.getElementssByClassName(normal);
 
   function show-all {
     positive.style.display = "";

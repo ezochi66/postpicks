@@ -1,11 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<div class="new-group-menu"><a href="groups/new">+</a></div>
-<% @groups.each do |group| %>
-  <div class="group-menu">
-    <a href="/picks?search=<%= group.id %>"><%= group.name %></a>
-  </div>
-<% end %>
+  <div class="new-group-menu"><a href="groups/new">+</a></div>
+  <% @groups.each do |group| %>
+    <div class="group-menu">
+      <a href="/picks?search=<%= group.id %>"><%= group.name %></a>
+    </div>
+  <% end %>
+</div>
 
 
 <br>
