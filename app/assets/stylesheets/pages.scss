@@ -1,9 +1,12 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-#info-top {
+.brcolor{
     background-color: #ACEB7C;
-    // width: 126%;
-    // height: 500px;
-    // margin: -50px 0 0 -13% ;
+    width: 100%;
+    overflow: hidden;
+}
+
+.brcolor img {
+    max-width: 100%;
 }
