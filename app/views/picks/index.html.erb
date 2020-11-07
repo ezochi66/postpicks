@@ -7,9 +7,9 @@
   <%= link_to 'Clear', picks_path %>
 <% end %>
 
-<button type="button" onClick="show-all">All</button>
-<button type="button" onClick="show-positive">Positive</button>
-<button type="button" onClick="show-negative">Negative</button>
+<button type="button" class="show-all">All</button>
+<button type="button" class="show-positive">Positive</button>
+<button type="button" class="show-negative">Negative</button>
 
 <br>
 <% @picks.in_groups_of(3) do |group| %>
@@ -53,23 +53,29 @@
 <%= link_to 'Show Group', groups_path %>
 
 <script>
-  function show-positive() {
-      document.document.getElementsByClassName('.positive').style.display = "";
-      document.document.getElementsByClassName('.negative').style.display = "none";
-      document.document.getElementsByClassName('.normal').style.display = "none";
-    }
+  // function show-positive() {
+  //     document.document.getElementsByClassName('.positive').style.display = "";
+  //     document.document.getElementsByClassName('.negative').style.display = "none";
+  //     document.document.getElementsByClassName('.normal').style.display = "none";
+  //   }
 
-    function show-negative() {
-      document.document.getElementsByClassName('.positive').style.display = "none";
-      document.document.getElementsByClassName('.negative').style.display = "";
-      document.document.getElementsByClassName('.normal').style.display = "none";
-    }
+  //   function show-negative() {
+  //     document.document.getElementsByClassName('.positive').style.display = "none";
+  //     document.document.getElementsByClassName('.negative').style.display = "";
+  //     document.document.getElementsByClassName('.normal').style.display = "none";
+  //   }
 
-    function show-all() {
-      document.document.getElementsByClassName('.positive').style.display = "";
-      document.document.getElementsByClassName('.negative').style.display = "";
-      document.document.getElementsByClassName('.normal').style.display = "";
-    }
+  //   function show-all() {
+  //     document.document.getElementsByClassName('.positive').style.display = "";
+  //     document.document.getElementsByClassName('.negative').style.display = "";
+  //     document.document.getElementsByClassName('.normal').style.display = "";
+  //   }
+
+  $(document).on 'turbolinks:load', ->
+  $(".show-positive").on "click" , ->
+    $(".positive").toggle()
+
+  
 
 </script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
