@@ -1,12 +1,12 @@
 <div class="container">
   <h1>Picks</h1>
   <p>検索</p>
-  <%= form_tag(picks_path,:method => 'get') do %>
+  <%= form_tag(picks_path,:method => 'get', name: "searchName") do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag 'Search', :name => nil %>
     <%= link_to 'Clear', picks_path %>
   <% end %>
-
+  <p id="span1"></p>
   <button type="button" onClick="show-all">All</button>
   <button type="button" onClick="show-positive">Positive</button>
   <button type="button" onClick="show-negative">Negative</button>
@@ -53,27 +53,27 @@
 </div>
 
 <script>
-  var positive = document.getElementssByClassName(positive);
-  var positive = document.getElementssByClassName(negative);
-  var positive = document.getElementssByClassName(normal);
+  // var positive = document.getElementssByClassName(positive);
+  // var positive = document.getElementssByClassName(negative);
+  // var positive = document.getElementssByClassName(normal);
 
-  function show-all {
-    positive.style.display = "";
-    negative.style.display = "";
-    normal.style.display = "";
-  }
+  // function show-all {
+  //   positive.style.display = "";
+  //   negative.style.display = "";
+  //   normal.style.display = "";
+  // }
 
-  function show-positive {
-    positive.style.display = "";
-    negative.style.display = "none";
-    normal.style.display = "none";
-  }
+  // function show-positive {
+  //   positive.style.display = "";
+  //   negative.style.display = "none";
+  //   normal.style.display = "none";
+  // }
 
-  function show-negative {
-    positive.style.display = "none";
-    negative.style.display = "";
-    normal.style.display = "none";
-  }
+  // function show-negative {
+  //   positive.style.display = "none";
+  //   negative.style.display = "";
+  //   normal.style.display = "none";
+  // }
 
   // $(document).on 'turbolinks:load', ->
   // $(".show-positive").on "click" , ->

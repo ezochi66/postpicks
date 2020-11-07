@@ -4,13 +4,14 @@
   <div class="new-group-menu"><a href="groups/new">+</a></div>
   <% @groups.each do |group| %>
     <div class="group-menu">
-      <a href="/picks?search=<%= group.id %>"><%= group.name %></a>
+      <a href="/picks?search=<%= group.id %>" class="add_group_name"><%= group.name %></a>
     </div>
   <% end %>
+  <br>
 </div>
 
 
-<br>
+
 
 <%# <%= link_to 'New Group', new_group_path %>
 <%# <%= link_to 'Show Pick', picks_path %>

@@ -8,6 +8,10 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+var serch_name = function add_search_name(group_id) {
+    return group_id;
+}
+
 //= require jquery
 //= require jquery_ujs
 
