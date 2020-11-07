@@ -7,15 +7,14 @@
   <%= link_to 'Clear', picks_path %>
 <% end %>
 
-<button type="button" class="show-all">All</button>
-<button type="button" class="show-positive">Positive</button>
-<button type="button" class="show-negative">Negative</button>
+<button type="button" onClick="show-all">All</button>
+<button type="button" onClick="show-positive">Positive</button>
+<button type="button" onClick="show-negative">Negative</button>
 
 <br>
 <% @picks.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.compact.each do |pick| %>
-      <%# <%= feel = "positive"%>
       <% if pick.feel == "Positive"%>
       <div class="col-md-12 pic-wrapper positive">
       <% elsif pick.feel == "Negative"%>
@@ -53,27 +52,31 @@
 <%= link_to 'Show Group', groups_path %>
 
 <script>
-  // function show-positive() {
-  //     document.document.getElementsByClassName('.positive').style.display = "";
-  //     document.document.getElementsByClassName('.negative').style.display = "none";
-  //     document.document.getElementsByClassName('.normal').style.display = "none";
-  //   }
+  var positive = document.getElementByClassName(positive);
+  var positive = document.getElementByClassName(negative);
+  var positive = document.getElementByClassName(normal);
 
-  //   function show-negative() {
-  //     document.document.getElementsByClassName('.positive').style.display = "none";
-  //     document.document.getElementsByClassName('.negative').style.display = "";
-  //     document.document.getElementsByClassName('.normal').style.display = "none";
-  //   }
+  function show-all {
+    positive.style.display = "";
+    negative.style.display = "";
+    normal.style.display = "";
+  }
 
-  //   function show-all() {
-  //     document.document.getElementsByClassName('.positive').style.display = "";
-  //     document.document.getElementsByClassName('.negative').style.display = "";
-  //     document.document.getElementsByClassName('.normal').style.display = "";
-  //   }
+  function show-positive {
+    positive.style.display = "";
+    negative.style.display = "none";
+    normal.style.display = "none";
+  }
 
-  $(document).on 'turbolinks:load', ->
-  $(".show-positive").on "click" , ->
-    $(".positive").toggle()
+  function show-negative {
+    positive.style.display = "none";
+    negative.style.display = "";
+    normal.style.display = "none";
+  }
+
+  // $(document).on 'turbolinks:load', ->
+  // $(".show-positive").on "click" , ->
+  //   $(".positive").toggle()
 
   
 
