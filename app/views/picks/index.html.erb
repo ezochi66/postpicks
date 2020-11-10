@@ -1,4 +1,4 @@
-<div class="container main-wrapper">
+<div class="container main-w1rapper">
   <h1>Picks</h1>
   <p>検索</p>
   <%= form_tag(picks_path,:method => 'get', name: "searchName") do %>
@@ -6,9 +6,9 @@
     <%= submit_tag 'Search', :name => nil %>
     <%= link_to 'Clear', picks_path %>
   <% end %>
-  <button type="button" onClick="show-all">All</button>
-  <button type="button" onClick="show-positive">Positive</button>
-  <button type="button" onClick="show-negative">Negative</button>
+  <button type="button" onClick="show-all"><a href="/picks?search=<%= @search_name%>"></a>All</button>
+  <button type="button" onClick="show-positive"><a href="/picks/positive/search=<%= @search_name%>">Positive</a></button>
+  <button type="button" onClick="show-negative"><a href="/picks/negative/search=<%= @search_name%>">Negative</a></button>
 
   <br>
   <% @picks.in_groups_of(3) do |group| %>

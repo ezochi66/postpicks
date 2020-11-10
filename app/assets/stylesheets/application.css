@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-    margin: 0 auto;
+    margin: 33px;
 }
 .main-wrapper {
     padding: 50px 0;
@@ -50,8 +50,6 @@ footer {
     margin: 20px 0;
     color: black;
 }
-
-
 
 #map {
   height: 400px;
