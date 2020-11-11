@@ -1,15 +1,19 @@
 <div class="container main-w1rapper">
   <h1>Picks</h1>
-  <p>検索</p>
   <%= form_tag(picks_path,:method => 'get', name: "searchName") do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag 'Search', :name => nil %>
     <%= link_to 'Clear', picks_path %>
   <% end %>
+
+  <p id="span1"></p>
+  <a href="" class="btn btn--yellow btn--cubic">All</a>
+  <a href="" class="btn btn--orange btn--cubic">Positive</a>
+  <a href="" class="btn btn--purple btn--cubic">Negative</a>
+  
   <button type="button" onClick="show-all"><a href="/picks?search=<%= @search_name%>"></a>All</button>
   <button type="button" onClick="show-positive"><a href="/picks/positive/search=<%= @search_name%>">Positive</a></button>
   <button type="button" onClick="show-negative"><a href="/picks/negative/search=<%= @search_name%>">Negative</a></button>
-
   <br>
   <% @picks.in_groups_of(3) do |group| %>
     <div class="row">

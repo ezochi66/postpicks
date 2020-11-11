@@ -26,6 +26,7 @@ body {
     padding: 50px 0;
 }
 
+
 table, td, th {
     vertical-align: middle; border: none; 
 }
@@ -61,4 +62,18 @@ footer {
 
 #title-area {
     background-color: #FDFBDA;
+}
+
+nav.navbar {
+    background-color: #ffffff;
+    background-image: none;
+  }
+
+.navbar a.brand { 
+    font-size: 18px;
+}
+.navbar a.brand:hover {
+  color: #ACEB7C;
+  background-color: transparent;
+  text-decoration: none;
 }
