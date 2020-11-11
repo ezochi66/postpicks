@@ -1,6 +1,5 @@
 <div class="container">
   <h1>Picks</h1>
-  <%# あとで消す %>
   <%= form_tag(picks_path,:method => 'get', name: "searchName") do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag 'Search', :name => nil %>
@@ -8,7 +7,7 @@
   <% end %>
 
   <p id="span1"></p>
-  <a href="" class="btn btn--yellow btn--cubic">All</a>
+  <a href="" class="btn btn--white btn--cubic">All</a>
   <a href="" class="btn btn--orange btn--cubic">Positive</a>
   <a href="" class="btn btn--purple btn--cubic">Negative</a>
   
