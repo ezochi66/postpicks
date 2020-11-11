@@ -1,5 +1,6 @@
-<div class="container main-w1rapper">
+<div class="container">
   <h1>Picks</h1>
+  <%# あとで消す %>
   <%= form_tag(picks_path,:method => 'get', name: "searchName") do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag 'Search', :name => nil %>

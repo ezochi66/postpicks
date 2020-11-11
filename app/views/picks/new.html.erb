@@ -1,7 +1,4 @@
-<div class="container main-wrapper">
-    <h1 class="new-title">Post Picks</h1>
+<h1 class="new-title">Post Picks</h1>
+<%= render 'form', pick: @pick %>
 
-    <%= render 'form', pick: @pick %>
-
-    <%= link_to 'Back', picks_path %>
-</div>
+<%= link_to 'Back', picks_path %>
