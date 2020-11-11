@@ -26,31 +26,16 @@
     <%= form.label :group_id %>
     <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
   </div>
-
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-  </div>
   
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: "input-description" %>
-    <p id="counter">0文字</p>
-  </div>
+   <input type="submit" value="Share" class="button">
+    
+    <br>
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.file_field :picture %>
-  </div>
+    <%#<div class="actions">%>
+    <%#<%= form.submit %>
+    </div>
+  <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
   </div>
 <% end %>
 </div>
