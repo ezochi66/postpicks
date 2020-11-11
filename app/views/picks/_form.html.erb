@@ -1,17 +1,26 @@
 
 <div class="wrapper">
   <%= form_with(model: pick, local: true) do |form| %>
-  <% if pick.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(pick.errors.count, "error") %> prohibited this pick from being saved:</h2>
+    <% if pick.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(pick.errors.count, "error") %> prohibited this pick from being saved:</h2>
 
-      <ul>
-        <% pick.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% pick.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <br/>
+
+    <div class="field ">
+      <%= form.radio_button :feel, :Positive %>
+      <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
+      <%= form.radio_button :feel, :Negative %>
+      <%= form.label :feel, "Negative", {value: :Negative, style: "display: inline-block;"} %>
     </div>
-  <% end %>
 
   <br/>
 
@@ -38,4 +47,5 @@
 
   </div>
 <% end %>
+
 </div>
