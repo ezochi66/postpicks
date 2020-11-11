@@ -10,6 +10,7 @@ class Pick < ApplicationRecord
 
     def self.search(search)
       return Pick.all unless search
+      @search_name = search
       # Pick.where(['address LIKE ? OR location LIKE ? OR description LIKE ? OR feel LIKE ? OR group_id LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%"])
       Pick.where(['feel LIKE ? OR group_id LIKE ?', "%#{search}%", "%#{search}%"])
     end
