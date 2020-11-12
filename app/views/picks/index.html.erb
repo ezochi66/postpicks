@@ -10,6 +10,17 @@
     <%= f.label :feel, "Keyword" %>
     <%= f.search_field :feel_cont %>
 
+    <%= f.radio_button :feel_cont, :positive %>
+    <%= f.label :feel, "Positive", {value: :positive, style: "display: inline-block;"} %>
+    <%= f.radio_button :feel_cont, :negative %>
+    <%= f.label :feel, "Negative", {value: :negative, style: "display: inline-block;"} %>
+
+    <%= f.label :group_id_eq, "Group名" %>
+    <%= f.collection_select :group_id_eq, @groups, :id, :name, :include_blank => '指定なし' %>
+
+    <%#= f.label :feel, "Group名" %>
+    <%#= f.collection_radio_buttons :group_id_eq, @groups, :id, :name %>
+
     <%= f.submit "検索" %>
   <% end %>
 

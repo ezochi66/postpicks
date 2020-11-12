@@ -7,8 +7,17 @@ class PicksController < ApplicationController
     # @picks = Pick.search(params[:search])
     # @picks = Pick.all
     @q = Pick.ransack(params[:q])
-    @picks = @q.result(distinct: true)
+    # @picks = @q.result(distinct: true)
+    @groups = Group.all
+    @picks = @q.result.includes(:group)
   end
+
+  def search
+    @q = Pick.search(search_params)
+    # @picks = @q.result(distinct: true)
+    @picks = @q.result.include(:group)
+  end
+
 
   # GET /picks/1
   # GET /picks/1.json
@@ -76,4 +85,7 @@ class PicksController < ApplicationController
       # params.require(:pick).permit(:group_id, :location, :description, :picture, :address)
     end
     
+    def search_params
+      params.require(:q).permit!
+    end
 end
