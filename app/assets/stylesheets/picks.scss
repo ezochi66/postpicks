@@ -81,19 +81,42 @@ a.btn--white {
   a.btn--purple:hover {
     margin-top: 3px;
     color: #000;
-    background: #CC99FF;
+    background: #ccb3e6;
     border-bottom: 2px solid #9999CC;
   }
 
-.button{
+  @media screen and (min-width: 1170px){
+.button_share{
   color: #000;
-  background-color: #00CCFF;
-  border-bottom: 5px solid #9e9478;
+  background-color: #a0d8ef;
+  border-color: #a0d8ef;
+  border-bottom: 5px solid black;
 }
 
-.button:hover {
+.button_share:hover {
   margin-top: 3px;
   color: #000;
-  background: #00CCFF;
-  border-bottom: 2px solid #9e9478;
+  background: #a0d8ef;
+  border-color: #a0d8ef;
+  border-bottom: 2px solid black;
+}
+}
+
+@media screen and (max-width: 1171px){
+  .button_share{
+    color: #000;
+    background-color: #a0d8ef;
+    border-color: #a0d8ef;
+    border-bottom: 5px solid black;
+    width: 90%;
+  }
+  
+  .button_share:hover {
+    margin-top: 3px;
+    color: #000;
+    background: #a0d8ef;
+    border-color: #a0d8ef;
+    border-bottom: 2px solid black;
+    width: 90%;
+  }
 }
