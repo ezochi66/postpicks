@@ -4,8 +4,10 @@ class PicksController < ApplicationController
   # GET /picks
   # GET /picks.json
   def index
-    @picks = Pick.search(params[:search])
+    # @picks = Pick.search(params[:search])
     # @picks = Pick.all
+    @q = Pick.ransack(params[:q])
+    @picks = @q.result(distinct: true)
   end
 
   # GET /picks/1

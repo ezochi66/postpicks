@@ -12,6 +12,8 @@ end
 group :production do
   gem 'pg'
 end
+gem 'ancestry'
+gem 'ransack'
 
 # # 開発環境(ローカル)ではSQLite3を使用
 # gem 'sqlite3', group: :development
