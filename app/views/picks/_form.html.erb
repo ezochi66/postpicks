@@ -16,7 +16,7 @@
     <br/>
     
 
-    <div class="field ">
+    <div class="field">
       <%= form.radio_button :feel, :Positive %>
       <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
       <%= form.radio_button :feel, :Negative %>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="field ">
-      <%= form.label :group_id %>
+      <%= form.label :group %>
       <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
     </div>
 

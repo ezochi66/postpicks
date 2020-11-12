@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'helps/index'
   get 'pages/info'
   resources :groups
   resources :picks

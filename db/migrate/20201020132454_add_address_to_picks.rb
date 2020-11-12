@@ -5,6 +5,5 @@ class AddAddressToPicks < ActiveRecord::Migration[6.0]
     add_column :picks, :longitude, :float
 
     add_column :picks, :feel, :string
-
   end
 end

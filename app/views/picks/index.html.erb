@@ -10,6 +10,9 @@
     <%= f.label :feel, "Keyword" %>
     <%= f.search_field :feel_cont %>
 
+    <%= f.label :group_id, "Group" %>
+    <%= f.search_field :group_id_cont %>
+
     <%= f.submit "検索" %>
   <% end %>
 
@@ -23,6 +26,7 @@
   <button type="button" onClick="show-positive"><a href="/picks?/search=<%= @search_name%>">Positive</a></button>
   <button type="button" onClick="show-negative"><a href="/picks?search=<%= @search_name%>">Negative</a></button>
   <br>
+  
   <% @picks.in_groups_of(3) do |group| %>
     <div class="row">
       <% group.compact.each do |pick| %>

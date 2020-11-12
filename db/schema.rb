@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 2020_10_20_132454) do
   end
 
   create_table "picks", force: :cascade do |t|
-    t.integer "group_id"
     t.string "location"
     t.text "description"
     t.string "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "groupid"
     t.string "address"
     t.float "latitude"
     t.float "longitude"

@@ -15,7 +15,7 @@ class PicksTest < ApplicationSystemTestCase
     click_on "New Pick"
 
     fill_in "Description", with: @pick.description
-    fill_in "Group", with: @pick.group_id
+    fill_in "Group", with: @pick.
     fill_in "Location", with: @pick.location
     fill_in "Picture", with: @pick.picture
     click_on "Create Pick"
@@ -29,7 +29,7 @@ class PicksTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Description", with: @pick.description
-    fill_in "Group", with: @pick.group_id
+    fill_in "Group", with: @pick.groupid
     fill_in "Location", with: @pick.location
     fill_in "Picture", with: @pick.picture
     click_on "Update Pick"
