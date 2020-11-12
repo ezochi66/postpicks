@@ -1,11 +1,18 @@
 <div class="container">
   <h1>Picks</h1>
-  <h1>Picks</h1>
-  <%= form_tag(picks_path,:method => 'get', name: "searchName") do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag 'Search', :name => nil %>
-    <%= link_to 'Clear', picks_path %>
+  <%#= form_tag(picks_path,:method => 'get', name: "searchName") do %>
+    <%#= text_field_tag :search, params[:search] %>
+    <%#= submit_tag 'Search', :name => nil %>
+    <%#= link_to 'Clear', picks_path %>
+  <%# end %>
+
+  <%= search_form_for @q do |f| %>
+    <%= f.label :feel, "Keyword" %>
+    <%= f.search_field :feel_cont %>
+
+    <%= f.submit "検索" %>
   <% end %>
+
 
   <p id="span1"></p>
   <a href="" class="btn btn--white btn--cubic">All</a>
@@ -29,13 +36,15 @@
           <div class="col-md-4">
             <%= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-4">
             <h4>Group Name</h4>  
             <p><%= pick.group.name %></p>
             <h4>Address</h4>
             <p><%= pick.address %></p>
             <h4>Location</h4>
             <p><%= pick.location%></p>
+          </div>
+          <div class="col-md-4">  
             <h4>Description</h4>
             <%= pick.description %>
             <br />
