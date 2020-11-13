@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.new-group-menu {
+.new-group-menu { //group作成の＋
     position: relative;
     display: inline-block;
     width: 200px;
@@ -74,3 +74,43 @@ a {
     font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
     font-weight: bold;
 }
+
+@media screen and (max-width: 1171px){
+    .name_bar{
+        text-align: left;
+        width: 150%;
+    }
+    .button_create{
+      color: #000;
+      background-color: #a0d8ef;
+      border-color: #a0d8ef;
+      border-bottom: 5px solid black;
+      width: 90%;
+    }
+    
+    .button_create:hover {
+      margin-top: 3px;
+      color: #000;
+      background: #a0d8ef;
+      border-color: #a0d8ef;
+      border-bottom: 2px solid black;
+      width: 90%;
+    }
+  }
+
+  @media screen and (min-width: 1170px){
+    .button_create{
+      color: #000;
+      background-color: #a0d8ef;
+      border-color: #a0d8ef;
+      border-bottom: 5px solid black;
+    }
+    
+    .button_create:hover {
+      margin-top: 3px;
+      color: #000;
+      background: #a0d8ef;
+      border-color: #a0d8ef;
+      border-bottom: 2px solid black;
+    }
+  }
