@@ -12,11 +12,10 @@
         </ul>
       </div>
     <% end %>
-
     <br/>
     
 
-    <div class="field ">
+    <div class="field radio_button">
       <%= form.radio_button :feel, :Positive %>
       <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
       <%= form.radio_button :feel, :Negative %>
@@ -48,16 +47,9 @@
       <%= form.label :picture %>
       <%= form.file_field :picture %>
     </div>
-
-    <%# <div class="actions"> %>
-    <div class="actions">
-      <%= form.submit %>  
-    </div>
-  
+<br>
     <input type="submit" value="Share" class="button_share">
     
-    <br>
-
     <%#<div class="actions">%>
     <%#<%= form.submit %>
     </div>
