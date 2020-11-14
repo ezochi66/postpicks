@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-    margin: 100px;
+    margin: 0px 0px 100px 100px;
 }
 .main-wrapper {
     padding: 50px 0;
@@ -115,7 +115,7 @@ footer {
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 10;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   @media screen and (max-width: 600px) {
     display: none;
     position: absolute;

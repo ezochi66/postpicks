@@ -1,5 +1,6 @@
 class Pick < ApplicationRecord
     belongs_to :group
+    has_many :comments
     mount_uploader :picture, PictureUploader
     #下は本番環境では、コメントアウト解除
     # validates :picture, presence: true

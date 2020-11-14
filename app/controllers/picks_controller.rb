@@ -22,6 +22,8 @@ class PicksController < ApplicationController
   # GET /picks/1
   # GET /picks/1.json
   def show
+    @comments = @pick.comments.all
+    @comment = @pick.comments.build
   end
 
   # GET /picks/new
