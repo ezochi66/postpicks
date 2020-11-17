@@ -16,11 +16,11 @@
 
 body { 
     margin: 0;
-    padding-top: 50px;
 }
 
 .container {
-    margin: 0px 0px 100px 100px;
+    margin: 0;
+    padding: 50px;
 }
 .main-wrapper {
     padding: 50px 0;
@@ -46,7 +46,8 @@ th {
 
 footer {
     text-align: center;
-    background-color: #FDFBDA;
+    /* background-color: #FDFBDA; */
+    background-color: #4a154b;
     padding: 50px;
     margin: 20px 0;
     color: black;

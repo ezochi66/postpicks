@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .brcolor{
     background-color: #ACEB7C;
-    width: 100%;
+    // width: 100%;
+    display: block;
 }
 
 .brcolor img {
@@ -11,7 +12,7 @@
 }
 
 .content p{
-    display: inline-block;
+    // display: inline-block;
     color:#707070;
     line-height: 18x;
     letter-spacing: 3px;
@@ -22,10 +23,10 @@
 }
 
 .top-img img{
-    max-width: 400px;
+    // max-width: 400px;
     width: 400px;
     padding: 5%;
     margin-top:30%;
-    //float: left;
+    float: left;
     text-align: center;
 }

@@ -157,3 +157,10 @@ textarea {
 .comment-body textarea{
   height: 50px;
 }
+
+.comment-wrapper {
+  height: 200px;
+  overflow: scroll;
+  padding: 20px;
+  border: 1px solid black;
+}

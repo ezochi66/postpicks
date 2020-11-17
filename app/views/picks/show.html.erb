@@ -1,46 +1,56 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
-  </div>
+<div class="row show-wrapper">
+  <% if @pick.feel == "Positive"%>
+  <div class="col-md-12 pic-wrapper positive">
+  <% elsif @pick.feel == "Negative"%>
+  <div class="col-md-12 pic-wrapper negative">
+  <% else%>
+  <div class="col-md-12 pic-wrapper normal">
+  <% end %>
+    <div class="col-md-4">
+      <%= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
+    </div>
 
-  <div class="col-md-4">
-    <p><b>Group: </b><%= @pick.group.name %></p>
-    <p><b>Address: </b><%= @pick.address %></p>
-    <p><b>Location: </b><%= @pick.location %></p>
-    <p><b>Description: </b><%= @pick.description %></p>
-    <p>
-      <strong>Address:</strong>
-      <%= @pick.address %>
-    </p>
+    <div class="col-md-4">
+      <p><b>Group: </b><%= @pick.group.name %></p>
+      <p><b>Address: </b><%= @pick.address %></p>
+      <p><b>Location: </b><%= @pick.location %></p>
+      <p><b>Description: </b><%= @pick.description %></p>
+      <p>
+        <strong>Address:</strong>
+        <%= @pick.address %>
+      </p>
 
-    <p>
-      <strong>Latitude:</strong>
-      <%= @pick.latitude %>
-    </p>
+      <p>
+        <strong>Latitude:</strong>
+        <%= @pick.latitude %>
+      </p>
 
-    <p>
-      <strong>Longitude:</strong>
-      <%= @pick.longitude %>
-    </p>
-    <p>
-      <%= link_to 'Edit', edit_pick_path(@pick) %> |
-      <%= link_to 'Destroy', @pick, data: { confirm: 'Are you sure?' }, method: :delete %> |
-      <%= link_to 'Back', picks_path %>
-    </p>
-  </div>
-  <div class="col-md-4">
-    <%#<h3>Comments</h3>%>
-    <%= render 'comments/form', comment: @comment %>
-    <% @comments.each do |comment| %>
-      <div>
-        <strong><%= comment.user_name %></strong>
-        <br />
-        <p><%= comment.body %></p>
-        <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+      <p>
+        <strong>Longitude:</strong>
+        <%= @pick.longitude %>
+      </p>
+      <p>
+        <%= link_to 'Edit', edit_pick_path(@pick) %> |
+        <%= link_to 'Destroy', @pick, data: { confirm: 'Are you sure?' }, method: :delete %> |
+        <%= link_to 'Back', picks_path %>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <%#<h3>Comments</h3>%>
+      <%= render 'comments/form', comment: @comment %>
+      <div class="comment-wrapper">
+        <% @comments.each do |comment| %>
+          <div>
+            <strong><%= comment.user_name %></strong>
+            <br />
+            <p><%= comment.body %></p>
+            <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
   <% if @pick.address != nil %>
     <div id="map"></div>
