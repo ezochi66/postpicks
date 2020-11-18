@@ -71,7 +71,7 @@ footer {
 .channel-menu {
   position: fixed;
   top: 0;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1170px) {
     position: inherit;
     margin-left: 0;
   }
@@ -85,7 +85,7 @@ footer {
   font-weight: 900;
   line-height: 53px;
   cursor: pointer;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1170px) {
     padding-left: 0;
   }
 }
@@ -116,7 +116,7 @@ footer {
   overflow-x: hidden;
   z-index: 10;
   padding-top: 100px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1170px) {
     display: none;
     position: absolute;
     &.show {
