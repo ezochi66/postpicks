@@ -1,15 +1,13 @@
-<div class="container">
 <h1>Select Group</h1>
-  <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-  <div class="new-group-menu"><a href="groups/new">+</a></div>
-  <% @groups.each do |group| %>
-    <div class="group-menu">
-      <a href="/picks?q%5Bfeel_cont%5D=&q%5Bgroup_id_eq%5D=<%= group.id %>&commit=検索"><%= group.name %></a>
-    </div>
-  <% end %>
-  <br>
-</div>
+<div class="new-group-menu"><a href="groups/new">+</a></div>
+<% @groups.each do |group| %>
+  <div class="group-menu">
+    <a href="/picks?q%5Bfeel_cont%5D=&q%5Bgroup_id_eq%5D=<%= group.id %>&commit=検索"><%= group.name %></a>
+  </div>
+<% end %>
+<br>
 
 
 

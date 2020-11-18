@@ -1,7 +1,13 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-  <div class="row">
+<div class="row show-wrapper">
+  <% if @pick.feel == "Positive"%>
+  <div class="col-md-12 pic-wrapper positive">
+  <% elsif @pick.feel == "Negative"%>
+  <div class="col-md-12 pic-wrapper negative">
+  <% else%>
+  <div class="col-md-12 pic-wrapper normal">
+  <% end %>
     <div class="col-md-4">
       <%= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
     </div>
@@ -31,41 +37,55 @@
         <%= link_to 'Back', picks_path %>
       </p>
     </div>
-    <% if @pick.address != nil %>
-      <div id="map"></div>
-    <% end %>
+    <div class="col-md-4">
+      <%#<h3>Comments</h3>%>
+      <%= render 'comments/form', comment: @comment %>
+      <div class="comment-wrapper">
+        <% @comments.each do |comment| %>
+          <div>
+            <strong><%= comment.user_name %></strong>
+            <br />
+            <p><%= comment.body %></p>
+            <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: '削除してもよろしいですか？' } %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <% if @pick.address != nil %>
+    <div id="map"></div>
+  <% end %>
 
-    <script type="text/javascript">
-      function initMap() {
+  <script type="text/javascript">
+    function initMap() {
 
-        var test = {lat: <%= @pick.latitude %>, lng: <%= @pick.longitude %>};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: test
-        });
-        var transitLayer = new google.maps.TransitLayer();
-        transitLayer.setMap(map);
+      var test = {lat: <%= @pick.latitude %>, lng: <%= @pick.longitude %>};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: test
+      });
+      var transitLayer = new google.maps.TransitLayer();
+      transitLayer.setMap(map);
 
-        var contentString = '住所：<%= @pick.address %>';
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
+      var contentString = '住所：<%= @pick.address %>';
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
 
-        var marker = new google.maps.Marker({
-          position:test,
-          map: map,
-          title: contentString
-        });
+      var marker = new google.maps.Marker({
+        position:test,
+        map: map,
+        title: contentString
+      });
 
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
-        });
-      }
-    </script>
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    }
+  </script>
 
-    <script async defer
-          src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=ENV['API_KEY']&callback=initMap">      
-    </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  </div>
-</div>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=ENV['API_KEY']&callback=initMap">      
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</div>
