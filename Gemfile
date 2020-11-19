@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
+gem "aws-sdk-s3", require: false
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'

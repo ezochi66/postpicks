@@ -1,4 +1,5 @@
 class Pick < ApplicationRecord
+    has_one_attached :avatar
     belongs_to :group
     has_many :comments
     mount_uploader :picture, PictureUploader

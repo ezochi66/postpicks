@@ -37,7 +37,10 @@
       <div class="col-md-12 pic-wrapper normal">
       <% end %>
         <div class="col-md-4">
-          <%= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
+          <%#= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
+          <% if pick.avatar.attached? %>
+            <%= image_tag pick.avatar %>
+          <% end %>
         </div>
         <div class="col-md-4">
           <h4>Group Name</h4>  
