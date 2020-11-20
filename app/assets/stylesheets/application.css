@@ -110,18 +110,34 @@ footer {
   height: 100%;
   width: 220px;
   /*float: left;*/
-  position: fixed;
+  /* position: fixed; */
   color: #ab9ba9;
   background-color: #4d394b;
-  overflow: auto;
+  /* overflow: auto; */
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 10;
   padding-top: 100px;
-  @media screen and (max-width: 1170px) {
+
+  }
+
+@media screen and (max-width: 1170px) {
+  .list{
     display: none;
     position: absolute;
-    &.show {
+    /* &.show {
       display: block;
-    }
+    } */
+  }
+
+}
+@media screen and (min-width: 1170px) {
+  .topbar{
+    display: none;
+    position: absolute;
+    /* &.show {
+      display: block;
+    } */
   }
 }
 

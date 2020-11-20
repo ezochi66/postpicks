@@ -113,12 +113,12 @@ textarea {
     border-bottom: 2px solid #9999CC;
   }
 
-  @media screen and (min-width: 1170px){
-.button_share{
-  color: #000;
-  background-color: #a0d8ef;
-  border-color: #a0d8ef;
-  border-bottom: 5px solid black;
+@media screen and (min-width: 1170px){
+  .button_share{
+    color: #000;
+    background-color: #a0d8ef;
+    border-color: #a0d8ef;
+    border-bottom: 5px solid black;
 }
 
 .button_share:hover {
