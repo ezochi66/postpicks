@@ -5,7 +5,6 @@ require 'carrierwave/storage/fog'
 CarrierWave.configure do |config|
   config.storage :fog
   config.fog_provider = 'fog/aws'
-  # config.fog_directory  = 'AWSで作成したバケット名'
   config.fog_credentials = {
     provider: 'AWS',
     aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
@@ -14,5 +13,13 @@ CarrierWave.configure do |config|
     path_style: true
   }
   config.fog_directory  = ENV['S3_BUCKET']
-  config.asset_host = `https://smoozypicks.s3.amazonaws.com`
+  # config.fog_directory  = 'AWSで作成したバケット名'
+  case Rails.env
+  when 'development'
+      config.fog_directory  = 'smoozypicks'
+      config.asset_host = 'https://s3.amazonaws.com/smoozypicks'
+  when 'production'
+      config.fog_directory  = 'smoozypicks'
+      config.asset_host = 'https://s3.amazonaws.com/smoozypicks'
+  end
 end
