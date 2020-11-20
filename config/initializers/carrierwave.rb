@@ -17,9 +17,11 @@ CarrierWave.configure do |config|
   case Rails.env
   when 'development'
       config.fog_directory  = 'smoozypicks'
-      config.asset_host = 'https://s3.amazonaws.com/smoozypicks'
+      # config.asset_host = 'https://s3.amazonaws.com/smoozypicks'
+      config.asset_host = 'https://smoozypicks.s3-ap-northeast-1.amazonaws.com'
   when 'production'
       config.fog_directory  = 'smoozypicks'
-      config.asset_host = 'https://s3.amazonaws.com/smoozypicks'
+      # config.asset_host = 'https://s3.amazonaws.com/smoozypicks'
+      config.asset_host = 'https:///smoozypicks.s3-ap-northeast-1.amazonaws.com'
   end
 end

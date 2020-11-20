@@ -9,7 +9,8 @@
   <div class="col-md-12 pic-wrapper normal">
   <% end %>
     <div class="col-md-4">
-      <%= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
+      <%#= image_tag(@pick.picture_url, width: '100%') if @pick.picture.present? %>
+      <%= image_tag @pick.picture.to_s, width: '100%' %>
     </div>
 
     <div class="col-md-4">
