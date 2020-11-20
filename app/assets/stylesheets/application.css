@@ -21,7 +21,9 @@ body {
 .container {
     margin: 0;
     padding: 50px;
+    max-width: 1000px;
 }
+
 .main-wrapper {
     padding: 50px 0;
 }
@@ -35,21 +37,18 @@ th {
     border-bottom: 1px solid #DDD; 
 }
 
-.nav-list {
-    /* background-color: #FDFBDA; */
-}
-
 .nav-list li {
     /* border: 1px solid black; */
     margin: 0 5px;
 }
 
 footer {
+    max-width: 1200px;
     text-align: center;
     /* background-color: #FDFBDA; */
     background-color: #4a154b;
-    padding: 50px;
-    margin: 20px 0;
+    padding: 50px 0;
+    /*margin: 20px 0;*/
     color: black;
 }
 
@@ -110,11 +109,11 @@ footer {
   min-height: 100vh;
   height: 100%;
   width: 220px;
-  float: left;
+  /*float: left;*/
+  position: fixed;
   color: #ab9ba9;
   background-color: #4d394b;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   z-index: 10;
   padding-top: 100px;
   @media screen and (max-width: 1170px) {
@@ -157,7 +156,7 @@ footer {
   padding-right: 17px;
   color: #ffffff;
   padding-left: 1rem;
-  a {
+  /*a {
     color: #ddd;
     text-decoration: none;
     width: 100%;
@@ -165,7 +164,7 @@ footer {
   }
   a:hover {
     color: #eee;
-  }
+  }*/
 }
 
 .channel.active {
