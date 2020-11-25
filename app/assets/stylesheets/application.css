@@ -18,10 +18,21 @@ body {
     margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
+  padding: 50px;
+  /* text-align: center; */
+  margin: 0 auto;
+}
+
+.container-fluid {
     margin: 0;
-    padding: 50px;
-    max-width: 1000px;
+    padding: 0;
+    /* padding: 50px; */
+    /* max-width: 1000px; */
 }
 
 .main-wrapper {
@@ -43,51 +54,46 @@ th {
 }
 
 footer {
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    width: 100%;
     text-align: center;
     /* background-color: #FDFBDA; */
     background-color: #4a154b;
     padding: 50px 0;
     /*margin: 20px 0;*/
     color: black;
+    z-index: 10;
 }
 
-#map {
-  height: 400px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:left;
-  width: 80%
-}
 
 #title-area {
     background-color: #FDFBDA;
 }
 
 .nav-container {
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 .channel-menu {
   position: fixed;
   top: 0;
-  @media screen and (max-width: 1170px) {
+  /* @media screen and (max-width: 1170px) {
     position: inherit;
     margin-left: 0;
-  }
+  } */
 }
 
 .channel-menu_name {
   display: inline-block;
   padding: 0 0.5rem 0 1.5rem;
   color: #555459;
-  font-size: 1.4rem;
-  font-weight: 900;
+  /* font-size: 1.4rem; */
+  /* font-weight: 900; */
   line-height: 53px;
   cursor: pointer;
-  @media screen and (max-width: 1170px) {
+  /* @media screen and (max-width: 1170px) {
     padding-left: 0;
-  }
+  } */
 }
 .channel_name .prefix {
   margin-right: 8px;
@@ -97,48 +103,31 @@ footer {
   padding-right: 0.5rem;
   font-weight: 500;
 }
+
 .channel-menu_date {
   font-weight: bold;
 }
+
 .channel-menu h3 {
   float: right;
   padding-right: 0.1rem;
   font-weight: 500;
 }
+
 .list {
   min-height: 100vh;
   height: 100%;
   width: 220px;
-  /*float: left;*/
-  /* position: fixed; */
+  width: 15%;
+  position: fixed;
   color: #ab9ba9;
   background-color: #4d394b;
   /* overflow: auto; */
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 10;
-  padding-top: 100px;
+  z-index: 5;
+  padding-top: 50px;
 
-  }
-
-@media screen and (max-width: 1170px) {
-  .list{
-    display: none;
-    position: absolute;
-    /* &.show {
-      display: block;
-    } */
-  }
-
-}
-@media screen and (min-width: 1170px) {
-  .topbar{
-    display: none;
-    position: absolute;
-    /* &.show {
-      display: block;
-    } */
-  }
 }
 
 .list_channels {
@@ -164,7 +153,32 @@ footer {
   color: #ab9ba9;
 }
 
-.channel {
+
+.channel-img img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.channel-img a:hover {
+  text-decoration: none;
+  background-color: #4d394b;
+  /* background-color: white; */
+}
+
+.channel_list ul {
+  padding-inline-start: 20px;
+}
+
+.channel_list li {
+  /* font-size: 20px; */
+  padding: 10px 0;
+}
+
+.channel_list li>a {
+  text-decoration: none;
+}
+
+/* .channel {
   height: 24px;
   line-height: 24px;
   border-top-right-radius: 0.25rem;
@@ -172,7 +186,7 @@ footer {
   padding-right: 17px;
   color: #ffffff;
   padding-left: 1rem;
-  /*a {
+  a {
     color: #ddd;
     text-decoration: none;
     width: 100%;
@@ -180,9 +194,105 @@ footer {
   }
   a:hover {
     color: #eee;
-  }*/
-}
+  }
+} */
 
 .channel.active {
   background: #4c9689;
+}
+
+.topbar {
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+nav.navbar {
+  min-height: 38px;
+  background-color: #4d394b;
+  background-image: none;
+}
+
+.navbar a.brand { 
+  font-size: 18px;
+  /* color: #ab9ba9;
+}
+
+.navbar a.brand:hover {
+  color: #fff;
+  background-color: transparent;
+  /* text-decoration: none; */
+}
+
+.navbar-default .navbar-brand {
+    color: #dcdcdc;
+}
+
+/* .navbar-default .navbar-nav>li>a { */
+.navbar-default .navbar-nav>li>a {
+    color: #dcdcdc;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+/* .navbar-default .navbar-nav>li>a { */
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .channel-img img {
+    margin: 0 0 50px 20px;
+  }
+
+  .channel_list li>a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .channel-img img {
+    margin: 0 0 50px 10px;
+  }
+  
+  .channel_list li>a {
+    font-size: 14px;
+  }
+}
+  
+@media screen and (max-width: 1000px) {
+  .container {
+    margin-top: 50px
+  }
+
+  .list{
+    display: none;
+    position: absolute;
+    /* &.show {
+      display: block;
+    } */
+  }
+
+  .channel-menu_name {
+    padding-left: 0;
+  }
+
+  .channel-menu {
+    position: inherit;
+    margin-left: 0;
+  }
+  
+}
+
+
+@media screen and (min-width: 1000px) {
+  .topbar{
+    display: none;
+    position: absolute;
+    /* &.show {
+      display: block;
+    } */
+  }
+
+
 }

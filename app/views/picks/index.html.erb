@@ -6,22 +6,20 @@
 <%# end %>
 <div id="search-picks">
   <%= search_form_for @q do |f| %>
-    <%= f.label :feel, "Keyword" %>
-    <%= f.search_field :feel_cont %>
-
-    <br/>
-
+    <h3>絞り込み検索</h3>
+    <%#= f.label :feel, "Keyword" %>
+    <%#= f.search_field :feel_cont %>
+    <h4><%= f.label :feel, "Positive or Negative" , style: "margin-top:20px;" %></h4>
     <%= f.radio_button :feel_cont, :positive %>
-    <%= f.label :feel, "Positive", {value: :positive, style: "display: inline-block;"} %>
+    <%= f.label :feel, "Positive", {value: :positive, style: "display: inline-block; font-weight:normal;"} %>
     <%= f.radio_button :feel_cont, :negative %>
-    <%= f.label :feel, "Negative", {value: :negative, style: "display: inline-block;"} %>
-
-    <%= f.label :group_id_eq, "Group名" %>
+    <%= f.label :feel, "Negative", {value: :negative, style: "display: inline-block; font-weight:normal;"} %>
+    <h4><%= f.label :group_id_eq, "Group名", style: "margin-top:20px;" %></h4>
     <%= f.collection_select :group_id_eq, @groups, :id, :name, :include_blank => '指定なし' %>
 
     <%#= f.label :feel, "Group名" %>
     <%#= f.collection_radio_buttons :group_id_eq, @groups, :id, :name %>
-
+    <br/>
     <%= f.submit "Search" %>
   <% end %>
 </div>
@@ -40,9 +38,9 @@
           <%#= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
           <%= image_tag pick.picture.to_s, width: '100%' %>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 pic-text">
           <h4>Group Name</h4>  
-          <p><%= pick.group.name %></p>
+          <p style="color:black;"><%= pick.group.name %></p>
           <h4>Address</h4>
           <p><%= pick.address %></p>
           <h4>Location</h4>
