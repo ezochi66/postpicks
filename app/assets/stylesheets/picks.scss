@@ -18,11 +18,11 @@
 .search-body {
   position: absolute;
   display: inline-block;
-  width: 80%;
+  width: 90%;
   top: 30px;
   left: 0;
   // border: 1px solid gray;
-  background:#eee;
+  background:#f0f8ff;
   // padding: 10px;
   margin-bottom: 100px;
   padding: 5px;
@@ -38,12 +38,14 @@
   height: 30px;
   border-radius:2px 0 0 2px;
   border:1px solid gray;
-  background:#eee;
+  // background:#eee;
+  background:#f4f4f4;
 }
 
 #search-picks input[type="submit"]{
   position: absolute;
-  width: 70px;
+  // width: 70px;
+  width: 10%;
   height: 30px;
   top: 0;
   left: 80%;
@@ -76,7 +78,8 @@ label element.style {
 #search-picks a {
   position: absolute;
   top: 0;
-  left: 92%;
+  left: 93%;
+  margin: 5px 0 0 5px;
 }
 
 #search-picks a:hover {
@@ -259,10 +262,19 @@ select {
   #search-picks {
     width: 100%;
   }
-  #search-picks a {
-    left: 93%;
+
+  #search-picks input[type="search"]{
+    width: 75%;
   }
 
+  #search-picks input[type="submit"]{
+    left: 75%;
+    width: 15%;
+  }
+
+  #search-picks a {
+    left: 91%;
+  }
   .button_share{
     color: #000;
     background-color: #a0d8ef;
