@@ -12,41 +12,42 @@
       </div>
     <% end %>
     <br/>
-    
-    <div class="field radio_button">
-      <%= form.label :feel %>
-      <%= form.radio_button :feel, :Positive %>
-      <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
-      <%= form.radio_button :feel, :Negative %>
-      <%= form.label :feel, "Negative", {value: :Negative, style: "display: inline-block;"} %>
-    </div>
+    <div class="form-body">
+      <div class="field">
+        <%= form.label :feel %>
+        <%= form.radio_button :feel, :Positive %>
+        <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
+        <%= form.radio_button :feel, :Negative %>
+        <%= form.label :feel, "Negative", {value: :Negative, style: "display: inline-block;"} %>
+      </div>
 
-    <div class="field ">
-      <%= form.label :group_id %>
-      <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
-    </div>
+      <div class="field ">
+        <%= form.label :group_id %>
+        <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
+      </div>
 
-    <div class="field">
-      <%= form.label :location %>
-      <%= form.text_field :location, :placeholder =>  "例）東京スカイツリー"%>
-    </div>
+      <div class="field">
+        <%= form.label :location %>
+        <%= form.text_field :location, :placeholder =>  "例）東京スカイツリー"%>
+      </div>
 
-    <div class="field">
-      <%= form.label :address %>
-      <%= form.text_field :address, :placeholder => "例）東京都墨田区押上１丁目１−２" %>
-    </div>
+      <div class="field">
+        <%= form.label :address %>
+        <%= form.text_field :address, :placeholder => "例）東京都墨田区押上１丁目１−２" %>
+      </div>
 
-    
-    <div class="field">
-      <%= form.label :description %>
-      <%= form.text_area :description, id: "input-description", :placeholder => "例）展望台からの景色は綺麗だった。" %>
-    </div>
+      
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_area :description, id: "input-description", :placeholder => "例）展望台からの景色は綺麗だった。" %>
+      </div>
 
-    <div class="field">
-      <%= form.label :picture %>
-      <%= form.file_field :picture %>
+      <div class="field">
+        <%= form.label :picture %>
+        <%= form.file_field :picture %>
+      </div>
     </div>
-<br>
+    <br>
     <input type="submit" value="Share" class="button_share">
     
     <%#<div class="actions">%>
