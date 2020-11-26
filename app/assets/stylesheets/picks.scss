@@ -123,11 +123,11 @@ select {
 }
 
 .positive {
-    background-color: #FFEABA;
+    background-color: #ffc489;
 }
 
 .negative {
-    background-color: #EFE3FD;
+    background-color: #ce9eff;
 }
 
 .normal {
@@ -198,7 +198,7 @@ select {
     width: 12%;
   }
   .form-body {
-  text-align: center;
+    // text-align: center;
   }
 
   input[type="text"] {

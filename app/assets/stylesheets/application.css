@@ -184,7 +184,7 @@ footer {
 
 nav.navbar {
   min-height: 38px;
-  background-color: #4d394b;
+  background-color: #e9f900;
   background-image: none;
 }
 
@@ -193,15 +193,15 @@ nav.navbar {
   /* color: #ab9ba9; */
 }
 .navbar-default .navbar-nav>li>a {
-    color: #dcdcdc;
+  color: #ab9ba9;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #fff;
+    color: #000;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: #fff;
+    color: #000;
 }
 
 @media screen and (min-width: 1200px) {
