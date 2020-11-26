@@ -1,3 +1,41 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+label {
+    padding: 5px 0;
+}
+
+.edit-btn {
+    color: #666666;
+    display: inline;
+}
+
+.edit-btn a {
+    color: #666666;
+}
+
+.edit-btn a:hover {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-btn:hover {
+    color: #666666;
+    background-color: #fff;
+}
+
+.back-btn {
+    display: inline;
+}
+.back-btn:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+input[type="submit"]{
+    padding: 5px;
+    border-radius:0 2px 2px 0;
+    background:#7fbfff;
+}

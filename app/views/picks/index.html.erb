@@ -6,21 +6,30 @@
 <%# end %>
 <div id="search-picks">
   <%= search_form_for @q do |f| %>
-    <h3>絞り込み検索</h3>
     <%#= f.label :feel, "Keyword" %>
-    <%#= f.search_field :feel_cont %>
-    <h4><%= f.label :feel, "Positive or Negative" , style: "margin-top:20px;" %></h4>
-    <%= f.radio_button :feel_cont, :positive %>
-    <%= f.label :feel, "Positive", {value: :positive, style: "display: inline-block; font-weight:normal;"} %>
-    <%= f.radio_button :feel_cont, :negative %>
-    <%= f.label :feel, "Negative", {value: :negative, style: "display: inline-block; font-weight:normal;"} %>
-    <h4><%= f.label :group_id_eq, "Group名", style: "margin-top:20px;" %></h4>
-    <%= f.collection_select :group_id_eq, @groups, :id, :name, :include_blank => '指定なし' %>
-
-    <%#= f.label :feel, "Group名" %>
-    <%#= f.collection_radio_buttons :group_id_eq, @groups, :id, :name %>
-    <br/>
-    <%= f.submit "Search" %>
+    <div id="keyword-search">
+    <%= f.search_field :feel_or_description_cont %>
+      <%= f.submit "Search" %>
+      <%= link_to 'Clear', picks_path %>
+    </div>
+    <button>詳細検索</button>
+    <div class="search-body">
+      <table>
+        <tr>
+          <td><%= f.label :feel, "Feel"%></td>
+          <td>
+            <%= f.radio_button :feel_cont, :positive %>
+            <%= f.label :feel, "Positive", {value: :positive, style: "display: inline-block; font-weight:normal;"} %>
+            <%= f.radio_button :feel_cont, :negative %>
+            <%= f.label :feel, "Negative", {value: :negative, style: "display: inline-block; font-weight:normal;"} %>
+          </td>
+        </tr>
+        <tr>           
+          <td><%= f.label :group_id_eq, "Group名" %></td>
+          <td><%= f.collection_select :group_id_eq, @groups, :id, :name, :include_blank => '指定なし' %></td>
+        </tr>
+      </table>
+    </div>
   <% end %>
 </div>
 
@@ -28,36 +37,37 @@
   <div class="row">
     <% group.compact.each do |pick| %>
       <% if pick.feel == "Positive"%>
-      <div class="col-md-12 pic-wrapper positive">
+        <div class="col-md-12 pic-wrapper positive">
       <% elsif pick.feel == "Negative"%>
-      <div class="col-md-12 pic-wrapper negative">
+        <div class="col-md-12 pic-wrapper negative">
       <% else%>
-      <div class="col-md-12 pic-wrapper normal">
+        <div class="col-md-12 pic-wrapper normal">
       <% end %>
-        <div class="col-md-4">
-          <%#= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
-          <%= image_tag pick.picture.to_s, width: '100%' %>
-        </div>
-        <div class="col-md-4 pic-text">
-          <h4>Group Name</h4>  
-          <p style="color:black;"><%= pick.group.name %></p>
-          <h4>Address</h4>
-          <p><%= pick.address %></p>
-          <h4>Location</h4>
-          <p><%= pick.location%></p>
-        </div>
-        <div class="col-md-4">  
-        <div class="description_style">
-          <h4>Description</h4>
-          <%= pick.description %>
+          <div class="col-md-4">
+            <%#= image_tag pick.picture_url, width: '100%' if pick.picture.present? %>
+            <%= image_tag pick.picture.to_s, width: '100%' %>
           </div>
-          <br />
-
-          <%= link_to 'Show', pick %>
-          <%= link_to 'Edit', edit_pick_path(pick) %>
-          <%= link_to 'Destroy', pick, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="col-md-4 pic-text">
+            <h4>Group Name</h4>  
+            <p style="color:black;"><%= pick.group.name %></p>
+            <h4>Address</h4>
+            <p><%= pick.address %></p>
+            <h4>Location</h4>
+            <p><%= pick.location%></p>
+          </div>
+          <div class="col-md-4">  
+          <div class="description-style">
+            <h4>Description</h4>
+            <p><%= pick.description %></p>
+            </div>
+            <br />
+            <div class="link-btn">
+              <%= link_to 'Show', pick %>
+              <%= link_to 'Edit', edit_pick_path(pick) %>
+              <%= link_to 'Destroy', pick, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
         </div>
-      </div>
     <% end %>
   </div>
 <% end %>
