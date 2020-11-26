@@ -58,7 +58,7 @@ footer {
     width: 100%;
     text-align: center;
     /* background-color: #FDFBDA; */
-    background-color: #4a154b;
+    background-color: #fbfbfb;
     padding: 50px 0;
     /*margin: 20px 0;*/
     color: black;
@@ -70,17 +70,9 @@ footer {
     background-color: #FDFBDA;
 }
 
-.nav-container {
-    /* margin: 20px; */
-}
-
 .channel-menu {
   position: fixed;
   top: 0;
-  /* @media screen and (max-width: 1170px) {
-    position: inherit;
-    margin-left: 0;
-  } */
 }
 
 .channel-menu_name {
@@ -91,9 +83,6 @@ footer {
   /* font-weight: 900; */
   line-height: 53px;
   cursor: pointer;
-  /* @media screen and (max-width: 1170px) {
-    padding-left: 0;
-  } */
 }
 .channel_name .prefix {
   margin-right: 8px;
@@ -121,7 +110,8 @@ footer {
   width: 15%;
   position: fixed;
   color: #ab9ba9;
-  background-color: #4d394b;
+  /* background-color: #4d394b; */
+  background-color: #e9f900;
   /* overflow: auto; */
   overflow-y: auto;
   overflow-x: hidden;
@@ -161,7 +151,7 @@ footer {
 
 .channel-img a:hover {
   text-decoration: none;
-  background-color: #4d394b;
+  background-color: #e9f900;
   /* background-color: white; */
 }
 
@@ -178,27 +168,13 @@ footer {
   text-decoration: none;
 }
 
-/* .channel {
-  height: 24px;
-  line-height: 24px;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  padding-right: 17px;
-  color: #ffffff;
-  padding-left: 1rem;
-  a {
-    color: #ddd;
-    text-decoration: none;
-    width: 100%;
-    display: inline-block;
-  }
-  a:hover {
-    color: #eee;
-  }
-} */
-
 .channel.active {
-  background: #4c9689;
+  background: #e9f900;
+}
+
+.channel_name:hover {
+  background: #e9f900;
+  color: #000;
 }
 
 .topbar {
@@ -214,20 +190,8 @@ nav.navbar {
 
 .navbar a.brand { 
   font-size: 18px;
-  /* color: #ab9ba9;
+  /* color: #ab9ba9; */
 }
-
-.navbar a.brand:hover {
-  color: #fff;
-  background-color: transparent;
-  /* text-decoration: none; */
-}
-
-.navbar-default .navbar-brand {
-    color: #dcdcdc;
-}
-
-/* .navbar-default .navbar-nav>li>a { */
 .navbar-default .navbar-nav>li>a {
     color: #dcdcdc;
 }
@@ -236,7 +200,6 @@ nav.navbar {
     color: #fff;
 }
 
-/* .navbar-default .navbar-nav>li>a { */
 .navbar-default .navbar-nav>li>a:hover {
     color: #fff;
 }

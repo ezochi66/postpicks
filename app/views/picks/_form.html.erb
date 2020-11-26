@@ -1,4 +1,3 @@
-
 <div class="wrapper">
   <%= form_with(model: pick, local: true) do |form| %>
     <% if pick.errors.any? %>
@@ -14,8 +13,8 @@
     <% end %>
     <br/>
     
-
     <div class="field radio_button">
+      <%= form.label :feel %>
       <%= form.radio_button :feel, :Positive %>
       <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
       <%= form.radio_button :feel, :Negative %>

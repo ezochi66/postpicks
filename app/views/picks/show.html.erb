@@ -13,25 +13,11 @@
       <%= image_tag @pick.picture.to_s, width: '100%' %>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4 show-body">
       <p><b>Group: </b><%= @pick.group.name %></p>
       <p><b>Address: </b><%= @pick.address %></p>
       <p><b>Location: </b><%= @pick.location %></p>
       <p><b>Description: </b><%= @pick.description %></p>
-      <p>
-        <strong>Address:</strong>
-        <%= @pick.address %>
-      </p>
-
-      <p>
-        <strong>Latitude:</strong>
-        <%= @pick.latitude %>
-      </p>
-
-      <p>
-        <strong>Longitude:</strong>
-        <%= @pick.longitude %>
-      </p>
       <p>
         <%= link_to 'Edit', edit_pick_path(@pick) %> |
         <%= link_to 'Destroy', @pick, data: { confirm: 'Are you sure?' }, method: :delete %> |

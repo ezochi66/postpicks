@@ -37,6 +37,7 @@
   top: 0;
   height: 30px;
   border-radius:2px 0 0 2px;
+  // border:1px solid gray;
   border:1px solid gray;
   // background:#eee;
   background:#f4f4f4;
@@ -110,8 +111,8 @@ select {
   width: 100%;
   padding: 20px;
   // margin: 50px 0; 
-  margin: 0px auto; 
-  border-bottom: 1px solid black;
+  margin: 5px auto; 
+  // border-bottom: 1px solid black;
   line-height: 10px;
   // border-radius: 10px;
   color: #333333;
@@ -144,15 +145,6 @@ select {
   padding: 30px 20px;
 }
 
-#map {
-  height: 400px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:left;
-  width: 90%
-}
-
-
 .description-style{
   line-height: 150%;
   padding-bottom: 13px;
@@ -161,6 +153,10 @@ select {
 .description-style h4 {
   font-weight: bold;
   color: #696969;
+}
+
+.show-body p {
+  padding: 20px;
 }
 
 .comment-body textarea{
@@ -173,6 +169,13 @@ select {
   padding: 20px;
   border: 1px solid black;
   background-color: #fff;
+}
+
+#map {
+  height: 400px;
+  margin: 100px auto 0 auto;
+  text-align:left;
+  width: 100%
 }
 
 @media screen and (min-width: 1170px){
@@ -228,10 +231,12 @@ select {
   
   .button_share{
     left: 70%;
+    width: 15%;
     color: #000;
     background:#7fbfff;
     border-color: #a0d8ef;
     border-bottom: 5px solid black;
+    margin-left: 55%;
   }
 
   .button_share:hover {
@@ -275,6 +280,7 @@ select {
   #search-picks a {
     left: 91%;
   }
+  
   .button_share{
     color: #000;
     background-color: #a0d8ef;
