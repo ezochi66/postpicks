@@ -24,7 +24,7 @@
           </td>
         </tr>
         <tr>           
-          <td><%= f.label :group_id_eq, "Group名" %></td>
+          <td><%= f.label :group_id_eq, "Groups" %></td>
           <td><%= f.collection_select :group_id_eq, @groups, :id, :name, :include_blank => '指定なし' %></td>
         </tr>
       </table>
@@ -61,8 +61,9 @@
             </div>
             <br />
             <div class="link-btn">
-              <span class="detail-show"><%= link_to 'Detail', pick, class: "detail" %></span>
-              <%= link_to 'Edit', edit_pick_path(pick) %>
+              <span class="detail-show"><%= link_to 'Extra infomation', pick, class: "detail" %></span>
+              <br>
+              <%= link_to 'Edit', edit_pick_path(pick) %> |
               <%= link_to 'Destroy', pick, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
           </div>
