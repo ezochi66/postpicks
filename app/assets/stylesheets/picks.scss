@@ -20,7 +20,7 @@
   display: inline-block;
   width: 90%;
   top: 30px;
-  left: 0;
+  // left: 0;
   // border: 1px solid gray;
   background:#f0f8ff;
   // padding: 10px;
@@ -33,7 +33,7 @@
   position: absolute;
   width: 80%;
   box-sizing: border-box;
-  left: 0;
+  // left: 0;
   top: 0;
   height: 30px;
   border-radius:2px 0 0 2px;
@@ -49,7 +49,7 @@
   width: 10%;
   height: 30px;
   top: 0;
-  left: 80%;
+  // left: 80%;
   border-radius: 5px;
   // margin-top: 40px;
   border-radius:0 2px 2px 0;
@@ -202,21 +202,12 @@ select {
 }
 
 @media screen and (min-width: 1170px){
-  input[type="text"] {
-      width: 70%;
-  }
 
-  input[type="file"] {
-      width: 25%;
-  }
-
-  textarea {
-      width: 70%;
-      height: 100px;
-  }
 }
 
 @media screen and (max-width: 1171px){  
+  
+
   #search-picks input[type="submit"]{
     width: 12%;
   }
@@ -239,6 +230,37 @@ select {
 }
 
 @media screen and (min-width: 1170px){
+  .search-body {
+    left: 15%;
+  }
+
+  #search-picks input[type="search"]{
+    width: 75%;
+    left: 15%;
+  }
+
+  #search-picks input[type="submit"]{
+    left: 85%;
+  }
+
+  #search-picks a {
+    left: 90%;
+    margin-left: 7%;
+  }
+
+  input[type="text"] {
+    width: 70%;
+  }
+
+  input[type="file"] {
+    width: 25%;
+  }
+
+  textarea {
+    width: 70%;
+    height: 100px;
+  }
+  
   #search-picks {
     width: 80%;
   }
@@ -286,13 +308,20 @@ select {
   }
 }
 
+
 @media screen and (max-width: 1170px){
   #search-picks {
     width: 100%;
   }
 
+  .search-body {
+    left: 0%;
+    width: 100%;
+  }
+
   #search-picks input[type="search"]{
     width: 75%;
+    left: 0%;
   }
 
   #search-picks input[type="submit"]{
