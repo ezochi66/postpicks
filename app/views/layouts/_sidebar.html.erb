@@ -2,13 +2,14 @@
     <div class="list_channels">
         <%# <h2 class="list_header"><a href="/pages/info">SMOOZY</a></h2> %>
         <div class="channel-img">
-            <a href="/pages/info"><img src ="/assets/smoozy.png" ></a>
+            <a href="/picks"><img src ="/assets/smoozy_bold.png" ></a>
         </div>
         <ul class="channel_list">
             <ul>
                 <li><%= sidebar_link_item('Home', picks_path) %></li>
                 <li><%= sidebar_link_item('Post', new_pick_path) %></li>
-                <li><%= sidebar_link_item('Select Group', groups_path) %></li>
+                <li><%= sidebar_link_item('Group', groups_path) %></li>
+                <li><%= sidebar_link_item('About', info_pages_path) %></li>
             </ul>
         </ul>
     </div>
