@@ -171,6 +171,29 @@ select {
   background-color: #fff;
 }
 
+.detail-show {
+  background:#7fbfff;
+  color: #fff;
+  padding: 5px;
+  box-shadow: 0 3px #666;
+}
+
+
+.detail{
+  color: #fff;
+}
+
+.detail-show a:hover {
+  background:#7fbfff;
+  color:#666;
+}
+
+.detail-show:active {
+    box-shadow: none;
+    position: relative;
+    top: 6px;
+}
+
 #map {
   height: 400px;
   margin: 100px auto 0 auto;
