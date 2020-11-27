@@ -46,14 +46,14 @@ table, td, th {
 
 th { 
     border-bottom: 1px solid #DDD; 
-}
-
-.nav-list li {
+  }
+  
+  .nav-list li {
     /* border: 1px solid black; */
     margin: 0 5px;
-}
-
-footer {
+  }
+  
+  footer {
     /* max-width: 1200px; */
     width: 100%;
     text-align: center;
@@ -63,17 +63,17 @@ footer {
     /*margin: 20px 0;*/
     color: black;
     z-index: 10;
-}
-
-
-#title-area {
+  }
+  
+  
+  #title-area {
     background-color: #FDFBDA;
-}
-
-.channel-menu {
-  position: fixed;
-  top: 0;
-}
+  }
+  
+  .channel-menu {
+    position: fixed;
+    top: 0;
+  }
 
 .channel-menu_name {
   display: inline-block;
@@ -84,6 +84,7 @@ footer {
   line-height: 53px;
   cursor: pointer;
 }
+
 .channel_name .prefix {
   margin-right: 8px;
 }
@@ -103,9 +104,6 @@ footer {
   font-weight: 500;
 }
 
-.topbar-img img {
-  width: 30%;
-}
 
 .list {
   min-height: 100vh;
@@ -184,12 +182,24 @@ footer {
 .topbar {
   padding: 20px;
   margin-bottom: 100px;
+  /* height: 10%; */
+}
+
+  
+.topbar-img img {
+  width: 30%;
+  display: inline;
+  /* margin-top: -30%; */
 }
 
 nav.navbar {
   min-height: 38px;
   background-color: #e9f900;
   background-image: none;
+}
+
+.navbar-header {
+  /* height: 10%; */
 }
 
 .navbar a.brand { 
@@ -227,7 +237,7 @@ nav.navbar {
   }
 }
   
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1171px) {
   .container {
     margin-top: 50px
   }
@@ -252,7 +262,7 @@ nav.navbar {
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1171px) {
   .topbar{
     display: none;
     position: absolute;
