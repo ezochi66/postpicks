@@ -8,6 +8,7 @@
 
 .topimg img {
     z-index: 1;
+    text-align: center;
 }
 
 .veg_low img{
@@ -20,11 +21,42 @@
 }
 
 .logo img{
-    width: 80%;
-    padding-left: 10%;   
+    width: 90%;
+    // padding-left: 10%;   
+}
+
+.info-img img {
+    width: 100%;
+    // padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #666;
+    padding: 30px 10px;
 }
 
 
+@media screen and (min-width: 1170px){
+    .singapore {
+        margin-top: 50px;
+    }
+    .logo img{
+        padding-left: 10%;   
+    }
+}
+
+@media screen and (max-width: 1170px){
+    .info-img {
+        text-align: center;
+    }
+
+    .info-img img {
+        width: 80%;
+        margin: 10px auto;
+        
+}
+}
 
 /*.top-img img{
     // max-width: 400px;
