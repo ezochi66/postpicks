@@ -241,7 +241,7 @@ nav.navbar {
   .container {
     margin-top: 50px
   }
-
+  
   .list{
     display: none;
     position: absolute;
@@ -270,6 +270,4 @@ nav.navbar {
       display: block;
     } */
   }
-
-
 }
