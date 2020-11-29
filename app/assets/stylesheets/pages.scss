@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-.logo{
+.logo {
     margin: 50px;
 }
 
@@ -25,15 +25,16 @@
     // padding-left: 10%;   
 }
 
-.info-img img {
-    width: 100%;
-    // padding: 20px;
-}
-
-h3 {
+.logo p {
+    font-size: 24px;
     text-align: center;
     color: #666;
     padding: 30px 10px;
+}
+
+.info-img img {
+    width: 100%;
+    // padding: 20px;
 }
 
 
@@ -55,7 +56,15 @@ h3 {
         width: 80%;
         margin: 10px auto;
         
-}
+    }
+
+    .logo img{
+        width: 100%;
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
 }
 
 /*.top-img img{
@@ -66,3 +75,9 @@ h3 {
     float: left;
     text-align: center;
 }*/
+
+@media screen and (max-width: 400px){
+    .logo p {
+        font-size: 10px;
+    }
+}
