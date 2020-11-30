@@ -61,6 +61,7 @@
 
 #search-picks input[type="submit"]:hover{
   color:#666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+  width: 10%;
 }
 
 label {
@@ -213,14 +214,13 @@ select {
     color:#666;
 }
 
-#map {
+  #map {
   height: 400px;
   margin: 100px auto 0 auto;
   text-align:left;
   width: 100%
-}
+  }
 
-@media screen and (max-width: 1171px){  
   #search-picks {
     margin-top: 90px;
   }
@@ -232,22 +232,38 @@ select {
   }
 
   .form-body {
-    // text-align: center;
+  // text-align: center;
   }
 
   input[type="text"] {
-    width: 90%;
+  width: 90%;
   }
 
   input[type="file"] {
-      width: 90%;
+    width: 90%;
   }
 
   textarea {
-      width: 90%;
-      height: 100px;
+    width: 90%;
+    height: 100px;
   }
-}
+
+  .button_share{
+    left: 90%;
+    width: 15%;
+    color: #000;
+    background:#7fbfff;
+    border-color: #a0d8ef;
+    border-bottom: 5px solid black;
+    // margin-left: 55%;
+  }
+
+  .button_share:hover {
+    margin-top: 3px;
+    color: #000;
+    border-color: #a0d8ef;
+    border-bottom: 2px solid black;
+  }
 
 @media screen and (min-width: 1170px){
   .search-body {
@@ -293,23 +309,6 @@ select {
   .pic-wrapper img {
     width: 80%
   }
-  
-  .button_share{
-    left: 70%;
-    width: 15%;
-    color: #000;
-    background:#7fbfff;
-    border-color: #a0d8ef;
-    border-bottom: 5px solid black;
-    margin-left: 55%;
-  }
-
-  .button_share:hover {
-    margin-top: 3px;
-    color: #000;
-    border-color: #a0d8ef;
-    border-bottom: 2px solid black;
-  }
 
   .pic-text h4 {
     padding: 10px 0;
@@ -354,11 +353,11 @@ select {
   }
   
   .button_share{
+    width: 90%;
     color: #000;
     background-color: #a0d8ef;
     border-color: #a0d8ef;
     border-bottom: 5px solid black;
-    width: 90%;
   }
   
   .button_share:hover {
@@ -367,7 +366,6 @@ select {
     background: #a0d8ef;
     border-color: #a0d8ef;
     border-bottom: 2px solid black;
-    width: 90%;
   }
 
   .pic-text h4 {

@@ -1,60 +1,54 @@
-<div class="wrapper">
-  <%= form_with(model: pick, local: true) do |form| %>
-    <% if pick.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(pick.errors.count, "error") %> prohibited this pick from being saved:</h2>
+<%= form_with(model: pick, local: true) do |form| %>
+  <% if pick.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pick.errors.count, "error") %> prohibited this pick from being saved:</h2>
 
-        <ul>
-          <% pick.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-    <br/>
-    <div class="form-body">
-      <div class="field">
-        <%= form.label :feel %>
-        <%= form.radio_button :feel, :Positive %>
-        <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
-        <%= form.radio_button :feel, :Negative %>
-        <%= form.label :feel, "Negative", {value: :Negative, style: "display: inline-block;"} %>
-      </div>
-
-      <div class="field ">
-        <%= form.label :group_id %>
-        <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
-      </div>
-
-      <div class="field">
-        <%= form.label :location %>
-        <%= form.text_field :location, :placeholder =>  "例）東京スカイツリー"%>
-      </div>
-
-      <div class="field">
-        <%= form.label :address %>
-        <%= form.text_field :address, :placeholder => "例）東京都墨田区押上１丁目１−２" %>
-      </div>
-
-      
-      <div class="field">
-        <%= form.label :description %>
-        <%= form.text_area :description, id: "input-description", :placeholder => "例）展望台からの景色は綺麗だった。" %>
-      </div>
-
-      <div class="field">
-        <%= form.label :picture %>
-        <%= form.file_field :picture %>
-      </div>
-    </div>
-    <br>
-    <input type="submit" value="Share" class="button_share">
-    
-    <%#<div class="actions">%>
-    <%#<%= form.submit %>
-    </div>
+      <ul>
+        <% pick.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
-  <span><%= link_to 'Back', picks_path %></span>
+  <br/>
+  <div class="form-body">
+    <div class="field">
+      <%= form.label :feel %>
+      <%= form.radio_button :feel, :Positive %>
+      <%= form.label :feel, "Positive", {value: :Positive, style: "display: inline-block;"} %>
+      <%= form.radio_button :feel, :Negative %>
+      <%= form.label :feel, "Negative", {value: :Negative, style: "display: inline-block;"} %>
+    </div>
 
-</div>
+    <div class="field ">
+      <%= form.label :group_id %>
+      <%= form.select :group_id, Group.all.map{|o| [o.name, o.id]} %>
+    </div>
+
+    <div class="field">
+      <%= form.label :location %>
+      <%= form.text_field :location, :placeholder =>  "例）東京スカイツリー"%>
+    </div>
+
+    <div class="field">
+      <%= form.label :address %>
+      <%= form.text_field :address, :placeholder => "例）東京都墨田区押上１丁目１−２" %>
+    </div>
+
+    
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, id: "input-description", :placeholder => "例）展望台からの景色は綺麗だった。" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :picture %>
+      <%= form.file_field :picture %>
+    </div>
+  </div>
+  <br>
+  <input type="submit" value="Share" class="button_share">
+  
+  <%#<div class="actions">%>
+  <%#<%= form.submit %>
+<% end %>

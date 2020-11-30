@@ -84,6 +84,10 @@ a {
     width: 90%
 }
 
+input[type= 'submit'] {
+  margin-bottom: 15px;
+}
+
 @media screen and (max-width: 1171px){
     .name_bar input[type = 'text']{
         width: 90%
@@ -115,6 +119,7 @@ a {
         width: 70%
     }
     .button_create{
+      width: 20%;
       color: #000;
       background-color: #a0d8ef;
       border-color: #a0d8ef;
