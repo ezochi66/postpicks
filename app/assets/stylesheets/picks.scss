@@ -107,6 +107,7 @@ select {
 }
 
 .pic-wrapper {
+  position: relative;
   // width: 80%;
   width: 100%;
   padding: 20px;
@@ -172,12 +173,17 @@ select {
 }
 
 .detail-show {
+  position: absolute;
+  top: 90%;
+  left: 87%;
+  width: 10%;
   display: inline-block;
   background:#7fbfff;
   color: #fff;
   padding: 8px;
   margin-bottom: 20px;
   box-shadow: 0 3px #666;
+  text-align: center;
 }
 
 
@@ -202,8 +208,8 @@ select {
 
 .detail-show:active {
     box-shadow: none;
-    position: relative;
-    top: 6px;
+    // position: relative;
+    top: 91%;
     color:#666;
 }
 
@@ -374,6 +380,43 @@ select {
   .pic-wrapper {
   // width: 80%;
     width: 100%;
+  }
+
+  .detail-show {
+    top: 96%;
+    left: 80%;
+    width: 13%;
+    text-align: center;
+  }
+
+  .detail-show:active {
+    top: 96.5%;
+}
+
+
+  .detail-show a {
+    // width: 50px;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px){
+   .detail-show {
+    top: 95%;
+    left: 78%;
+    width: 13%;
+    text-align: center;
+  }
+
+  .detail-show:active {
+    top: 95.4%;
+  }
+
+  .detail-show a {
+    // width: 50px;
+    font-size: 10px;
+    text-align: center;
   }
 }
 

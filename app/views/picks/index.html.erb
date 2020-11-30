@@ -55,17 +55,19 @@
             <p><%= pick.address %></p>
           </div>
           <div class="col-md-4">  
-          <div class="description-style">
-            <h4>Description</h4>
-            <p><%= pick.description %></p>
+            <div class="description-style">
+              <h4>Description</h4>
+              <p><%= pick.description %></p>
             </div>
             <br />
             <div class="link-btn">
-              <span class="detail-show"><%= link_to 'Extra infomation', pick, class: "detail" %></span>
               <br>
               <%= link_to 'Edit', edit_pick_path(pick) %> |
               <%= link_to 'Destroy', pick, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
+          </div>
+          <div class="detail-show">
+            <%= link_to '詳細', pick, class: "detail" %>
           </div>
         </div>
     <% end %>
@@ -74,39 +76,4 @@
 
 <br />
 
-
-<%#= link_to 'New Pick', new_pick_path %>
-<%#= link_to 'Show Group', groups_path %>
-
-
-<script>
-  // var positive = document.getElementssByClassName(positive);
-  // var positive = document.getElementssByClassName(negative);
-  // var positive = document.getElementssByClassName(normal);
-
-  // function show-all {
-  //   positive.style.display = "";
-  //   negative.style.display = "";
-  //   normal.style.display = "";
-  // }
-
-  // function show-positive {
-  //   positive.style.display = "";
-  //   negative.style.display = "none";
-  //   normal.style.display = "none";
-  // }
-
-  // function show-negative {
-  //   positive.style.display = "none";
-  //   negative.style.display = "";
-  //   normal.style.display = "none";
-  // }
-
-  // $(document).on 'turbolinks:load', ->
-  // $(".show-positive").on "click" , ->
-  //   $(".positive").toggle()
-
-  
-
-</script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
