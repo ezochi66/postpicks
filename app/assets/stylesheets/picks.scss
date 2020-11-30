@@ -383,14 +383,14 @@ select {
   }
 
   .detail-show {
-    top: 96%;
+    top: 97%;
     left: 80%;
-    width: 13%;
+    width: 15%;
     text-align: center;
   }
 
   .detail-show:active {
-    top: 96.5%;
+    top: 97.5%;
 }
 
 
@@ -401,11 +401,30 @@ select {
   }
 }
 
+@media screen and (max-width: 500px){
+   .detail-show {
+    top: 96%;
+    left: 78%;
+    width: 15%;
+    text-align: center;
+  }
+
+  .detail-show:active {
+    top: 96.4%;
+  }
+
+  .detail-show a {
+    // width: 50px;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 400px){
    .detail-show {
     top: 95%;
     left: 78%;
-    width: 13%;
+    width: 15%;
     text-align: center;
   }
 

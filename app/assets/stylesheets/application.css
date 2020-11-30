@@ -185,9 +185,14 @@ th {
   /* height: 10%; */
 }
 
+.topbar-img {
+  display: inline;
+  width: 30%;
+}
+
   
 .topbar-img img {
-  width: 30%;
+  width: 100%;
   display: inline;
   /* margin-top: -30%; */
 }
@@ -200,6 +205,10 @@ nav.navbar {
 
 .navbar-header {
   /* height: 10%; */
+}
+
+.navbar-toggle {
+  display: inline;
 }
 
 .navbar a.brand { 
