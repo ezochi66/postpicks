@@ -1,7 +1,3 @@
-# For fun students
-
-わからないことがあれば、b1018100@fun.ac.jpに連絡ください。
-
 # README
 
 This README would normally document whatever steps are necessary to get the
